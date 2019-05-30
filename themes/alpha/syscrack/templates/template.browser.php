@@ -42,7 +42,8 @@ use Framework\Application\Render;
                     <?php
                 }
                 else
-                    Render::view("../../" . $settings["browser_pages_root"] . $metadata->custom["browserpage"] );
+                    if( isset( $browser_page) )
+                        echo( $browser_page );
             ?>
         </div>
         <div class="panel-footer">

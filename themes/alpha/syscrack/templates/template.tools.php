@@ -39,12 +39,17 @@ use Framework\Application\Render;
                                         if( !empty( $tool["inputs"] ) )
                                             foreach( $tool["inputs"] as $input )
                                             {
+
                                                 if( $input["type"] == "softwares" )
                                                     Render::view("syscrack/templates/template.software.search", array('values' => @$softwares ) );
                                                 elseif( $input["type"] == "accounts" )
                                                     Render::view("syscrack/templates/template.software.search", array('values' => @$accounts ) );
                                                 elseif( $input["type"] == "localsoftwares" )
-                                                    Render::view("syscrack/templates/template.software.search", array('values' => @$localsoftwares) );
+                                                    Render::view("syscrack/templates/template.software.search", array('values' => @$localsoftwares ) );
+                                                elseif( $input["type"] == "softwaretypes" )
+	                                                Render::view("syscrack/templates/template.search", array('values' => @$softwaretypes, 'name' => 'softwaretypes' ) );
+                                                elseif( $input["type"] == "types" )
+	                                                Render::view("syscrack/templates/template.search", array('values' => @$types, 'name' => 'types' ) );
                                                 else
                                                     echo( $input["html"] );
                                             }

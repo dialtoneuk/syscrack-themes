@@ -40,25 +40,25 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img src="<?=@$assets["img"][0]?>" class="img-responsive" style="height: 400px; margin-left: auto; margin-right: auto;">
+                        <img src="<?=@$assets["img"][0]?>" class="img-responsive" style="height: 385px; margin-left: auto; margin-right: auto;">
                         <div class="carousel-caption">
                             <p>Research Software.</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="<?=@$assets["img"][1]?>" class="img-responsive" style="height: 400px; margin-left: auto; margin-right: auto;">
+                        <img src="<?=@$assets["img"][1]?>" class="img-responsive" style="height: 385px; margin-left: auto; margin-right: auto;">
                         <div class="carousel-caption">
                             <p>Control multiple computers.</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="<?=@$assets["img"][2]?>" class="img-responsive" style="height: 400px; margin-left: auto; margin-right: auto;">
+                        <img src="<?=@$assets["img"][2]?>" class="img-responsive" style="height: 385px; margin-left: auto; margin-right: auto;">
                         <div class="carousel-caption">
                             <p>Solve the riddle.</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="<?=@$assets["img"][3]?>" class="img-responsive" style="height: 400px; margin-left: auto; margin-right: auto;">
+                        <img src="<?=@$assets["img"][3]?>" class="img-responsive" style="height: 385px; margin-left: auto; margin-right: auto;">
                         <div class="carousel-caption">
                             <p>Hack your victims.</p>
                         </div>
@@ -77,7 +77,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
             </a>
         </div>
     </div>
-    <div class="row" style="margin-top: 2.5%;">
+    <div class="row" style="margin-top: 12px;">
         <div class="col-sm-12">
             <div class="panel panel-default" style="padding: 2%;">
                 <h5 class="text-center text-uppercase">

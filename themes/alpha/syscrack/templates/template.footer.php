@@ -1,4 +1,4 @@
-<footer style="margin-top: 15px;">
+<footer>
     <?php
         if (isset($breadcrumb))
         {

@@ -61,7 +61,7 @@
 
                 <?php
                 if (@$model->session["loggedin"]) {
-                    if ( @$computer )
+                    if ( @$currentcomputer )
                     {
                         ?>
                         <li class="dropdown">
@@ -70,7 +70,7 @@
                                aria-expanded="false">Procs</a>
                             <ul class="dropdown-menu">
                                 <li><a href="/processes/">All Processes</a></li>
-                                <li><a href="/processes/computer/<?= @$computer->computerid ?>">Current
+                                <li><a href="/processes/computer/<?= @$currentcomputer->computerid ?>">Current
                                         Machine Processes</a></li>
                             </ul>
                         </li>

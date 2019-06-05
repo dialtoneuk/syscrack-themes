@@ -11,17 +11,8 @@
 
     <?php
         Render::view('syscrack/templates/template.navigation');
+	    Render::view('syscrack/templates/template.errors');
     ?>
-    <div class="row">
-        <div class="col-sm-12">
-            <?php
-                if (isset($_GET['error']))
-                    Render::view('syscrack/templates/template.alert', array('message' => $_GET['error']));
-                elseif (isset($_GET['success']))
-                    Render::view('syscrack/templates/template.alert', array('message' => $settings['alert_success_message'], 'alert_type' => 'alert-success'));
-            ?>
-        </div>
-    </div>
     <div class="row">
         <div class="col-md-12">
             <h5 style="color: #ababab" class="text-uppercase">

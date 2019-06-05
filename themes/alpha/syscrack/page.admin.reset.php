@@ -1,12 +1,12 @@
 <?php
 
-use Framework\Application\Container;
+use Framework\Application\UtilitiesV2\Container;
 use Framework\Application\Render;
 use Framework\Application\Settings;
 use Framework\Syscrack\Game\Utilities\PageHelper;
 use Framework\Syscrack\User;
 
-$session = Container::getObject('session');
+$session = Container::get('session');
 
 if ($session->isLoggedIn()) {
 

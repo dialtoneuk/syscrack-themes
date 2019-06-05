@@ -15,7 +15,7 @@
         <div class="container-fluid" style="padding: 0;">
             <div class="row">
                 <?php
-                    Render::view('syscrack/templates/template.navigration');
+                    Render::view('syscrack/templates/template.navigation');
                 ?>
             </div>
         </div>

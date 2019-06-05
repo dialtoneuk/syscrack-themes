@@ -1,6 +1,6 @@
 <?php
 
-use Framework\Application\Container;
+use Framework\Application\UtilitiesV2\Container;
 use Framework\Application\Render;
 use Framework\Application\Settings;
 use Framework\Syscrack\Game\Computer;
@@ -10,7 +10,7 @@ $computer_controller = new Computer();
 
 $pagehelper = new PageHelper();
 
-$session = Container::getObject('session');
+$session = Container::get('session');
 
 if ($session->isLoggedIn()) {
 

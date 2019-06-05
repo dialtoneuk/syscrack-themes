@@ -9,14 +9,14 @@
     "base":"alpha",
     "assets":{
       "css":[
-        "bootstrap",
-        "bootstrap-grid",
-        "bootstrap-reboot",
-        "custom"
+        "custom",
+        "bootstrap"
       ],
       "js":[
-        "bootstrap.bundle",
         "bootstrap"
+      ],
+      "js_header":[
+        "jquery"
       ],
       "img":[
         "glythicons-halflings",

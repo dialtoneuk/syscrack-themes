@@ -1,6 +1,6 @@
 <?php
 
-use Framework\Application\Container;
+use Framework\Application\UtilitiesV2\Container;
 use Framework\Application\Render;
 use Framework\Syscrack\Game\AddressDatabase;
 use Framework\Syscrack\Game\Computer;
@@ -8,7 +8,7 @@ use Framework\Syscrack\Game\Internet;
 use Framework\Syscrack\Game\Utilities\PageHelper;
 use Framework\Syscrack\Game\Viruses;
 
-$session = Container::getObject('session');
+$session = Container::get('session');
 
 if ($session->isLoggedIn()) {
 

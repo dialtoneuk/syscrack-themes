@@ -1,9 +1,9 @@
 <?php
 
-    use Framework\Application\Container;
+    use Framework\Application\UtilitiesV2\Container;
     use Framework\Application\Render;
 
-    if( Container::hasObject('session') == false )
+    if( Container::exist('session') == false )
     {
 
         Flight::notFound();
@@ -11,7 +11,7 @@
     else
     {
 
-        $session = Container::getObject('session');
+        $session = Container::get('session');
 
         if( $session->isLoggedIn() == false )
         {

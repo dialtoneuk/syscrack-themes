@@ -1,6 +1,6 @@
 <?php
 
-use Framework\Application\Container;
+use Framework\Application\UtilitiesV2\Container;
 use Framework\Syscrack\Game\Computer;
 use Framework\Syscrack\Game\Internet;
 use Framework\Syscrack\Game\Software;
@@ -26,7 +26,7 @@ if (isset($internet) == false) {
     $internet = new Internet();
 }
 
-$session = Container::getObject('session');
+$session = Container::get('session');
 
 $computer = $internet->computer($value['ipaddress']);
 ?>

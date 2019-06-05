@@ -64,35 +64,27 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                     <div class="col-lg-12">
                                         <div class="thumbnail">
                                             <div class="caption">
-                                                <h1><?=$theme['name']?>  <small>version <?=$theme["version"]?></small></h1>
-                                                <h3 class="small">Created by <a href="<?=$theme["website"]?>"><?=$theme["author"]?></a></h3>
+                                                <h3><?=$theme['name']?>  <small>version <?=$theme["version"]?></small></h3>
+                                                <h4 class="small">Created by <a href="<?=$theme["website"]?>"><?=$theme["author"]?></a></h4>
                                                 <p><?=$theme['description']?></p>
-                                                <h3>Data</h3>
-                                                <div class="well">
-                                                    <?=print_r($theme["data"])?>
-                                                </div>
                                                 <form method="post">
                                                 <?php
                                                     if( $folder == $settings["render_folder"] )
                                                     {
                                                         ?>
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <div class="panel panel-warning">
-                                                                        <div class="panel-body">
-                                                                            You already have this theme selected.
-                                                                        </div>
-                                                                    </div>
+
+                                                                <div class="alert alert-info">
+                                                                    You already have this theme selected.
                                                                 </div>
-                                                            </div>
+
                                                         <?php
                                                     }
                                                     else
                                                     {
                                                         ?>
 
-                                                                <button style="width: 100%; margin-top: 2.5%;"
-                                                                        class="btn btn-default" type="submit">
+                                                                <button style="width: 100%;"
+                                                                        class="btn btn-default btn-sml" type="submit">
                                                                     <span class="glyphicon glyphicon-check"
                                                                           aria-hidden="true"></span> Switch
                                                                 </button>
@@ -101,7 +93,6 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                                     }
                                                 ?>
                                                 </form>
-
                                             </div>
                                         </div>
                                     </div>

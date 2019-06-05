@@ -113,7 +113,7 @@ if (isset($process))
 
         <?php
                 if( $duration > 0 )
-                    echo("line.animate(" . ( 1000 / ( $duration * ( time() - $process->timestarted ) ) ) . ")");
+                    echo("line.animate(" . ( 1000 / ( $duration * (  $process->timecompleted - time() ) ) ) / 0.5 . ")");
                 else
                     echo("line.animate(1)");
         ?>

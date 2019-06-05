@@ -28,7 +28,7 @@ if (isset($internet) == false) {
 
 $session = Container::getObject('session');
 
-$computer = $internet->getComputer($value['ipaddress']);
+$computer = $internet->computer($value['ipaddress']);
 ?>
 <div class="panel panel-default">
     <div class="panel-heading">

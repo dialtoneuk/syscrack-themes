@@ -1,15 +1,5 @@
 <?php
-
-use Framework\Application\Container;
-use Framework\Application\Render;
-use Framework\Application\Settings;
-
-$session = Container::getObject('session');
-
-if ($session->isLoggedIn()) {
-
-    $session->updateLastAction();
-}
+    use Framework\Application\Render;
 ?>
 
 <!DOCTYPE html>
@@ -37,17 +27,6 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 	?>
     <div class="row">
         <div class="col-sm-12">
-            <?php
-
-            if (isset($_GET['error']))
-                Render::view('syscrack/templates/template.alert', array('message' => $_GET['error']));
-            elseif (isset($_GET['success']))
-                Render::view('syscrack/templates/template.alert', array('message' => $settings['alert_success_message'], 'alert_type' => 'alert-success'));
-            ?>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
             <div style="background: black; height: 400px;" id="carousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -61,33 +40,27 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <div style="color: white; width: 100%; height: 400px; background: url('<?=Render::getAssetsLocation()?>img/art/art_prompt.png') center no-repeat;"></div>
+                        <img src="<?=@$assets["img"][0]?>" class="img-responsive" style="height: 400px; margin-left: auto; margin-right: auto;">
                         <div class="carousel-caption">
-                            <p>Hack your victims and infect them with your doom.</p>
+                            <p>Research Software.</p>
                         </div>
                     </div>
                     <div class="item">
-                        <div style="color: white; width: 100%; height: 400px; background: url('<?=Render::getAssetsLocation()?>img/art/art_monitor.png') center no-repeat;"></div>
+                        <img src="<?=@$assets["img"][1]?>" class="img-responsive" style="height: 400px; margin-left: auto; margin-right: auto;">
                         <div class="carousel-caption">
                             <p>Control multiple computers.</p>
                         </div>
                     </div>
                     <div class="item">
-                        <div style="color: white; width: 100%; height: 400px; background: url('<?=Render::getAssetsLocation()?>img/art/art_synth.png') center no-repeat;"></div>
+                        <img src="<?=@$assets["img"][2]?>" class="img-responsive" style="height: 400px; margin-left: auto; margin-right: auto;">
                         <div class="carousel-caption">
-                            <p>Have your own virtual marketplace and sell software and hardware.</p>
+                            <p>Solve the riddle.</p>
                         </div>
                     </div>
                     <div class="item">
-                        <div style="color: white; width: 100%; height: 400px; background: url('<?=Render::getAssetsLocation()?>img/art/art_stockmarket.png') center no-repeat;"></div>
+                        <img src="<?=@$assets["img"][3]?>" class="img-responsive" style="height: 400px; margin-left: auto; margin-right: auto;">
                         <div class="carousel-caption">
-                            <p>Become a bitcoin barron, host your own bitcoin exchanges.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div style="color: white; width: 100%; height: 400px; background: url('/assets/img/art/art_code.png') center no-repeat;"></div>
-                        <div class="carousel-caption">
-                            <p>Syscrack is a completely free and open source game.</p>
+                            <p>Hack your victims.</p>
                         </div>
                     </div>
                 </div>
@@ -181,22 +154,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 how far you want to go. Become a hacker for good, or for bad. The choice is in your hands.
             </p>
             <p>
-
-                <?php
-                if ($session->isLoggedIn()) {
-
-                    ?>
-
-                    So what are you waiting for? <a href="/game/">Get hacking!</a>
-                    <?php
-                } else {
-
-                    ?>
-
-                    So what are you waiting for? <a href="/register/">Register a new account and get hacking!</a>
-                    <?php
-                }
-                ?>
+                So what are you waiting for? <a href="/register/">Register a new account and get hacking!</a>
             </p>
             <h5 style="color: #ababab" class="text-uppercase">
                 FAQ
@@ -311,8 +269,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
         </div>
     </div>
     <?php
-
-    Render::view('syscrack/templates/template.footer', array('breadcrumb' => true));
+        Render::view('syscrack/templates/template.footer', array('breadcrumb' => true));
     ?>
 </div>
 </body>

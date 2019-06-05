@@ -6,6 +6,28 @@
   "version": 1.0,
   "data":{
     "mvc":true,
-    "base":"alpha"
+    "base":"alpha",
+    "assets":{
+      "css":[
+        "bootstrap",
+        "bootstrap-grid",
+        "bootstrap-reboot",
+        "custom"
+      ],
+      "js":[
+        "bootstrap.bundle",
+        "bootstrap"
+      ],
+      "img":[
+        "glythicons-halflings",
+        "glythicons-halflings-white",
+        "vibrant_blue",
+        "vibrant_cyan",
+        "vibrant_green",
+        "vibrant_red",
+        "vibrant_yellow",
+        "white"
+      ]
+    }
   }
 }

@@ -20,22 +20,12 @@ use Framework\Application\Render;
     <meta name="theme-color" content="#ffffff">
 
 
-    <link href="<?=Render::getAssetsLocation()?>css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?=Render::getAssetsLocation()?>css/bootstrap-combobox.css" rel="stylesheet">
 
     <?php
-    if (isset($styles)) {
-
-        if (is_array($styles)) {
-
-            foreach ($styles as $style) {
-
-                echo $style;
-            }
-        }
-    }
+    if (isset( $assets["css"] ))
+            foreach ($assets["css"]as $style)
+                echo "<link href='" . $style . "' rel='stylesheet'>";
     ?>
-    <link href="<?=Render::getAssetsLocation()?>css/custom.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -43,17 +33,9 @@ use Framework\Application\Render;
     <![endif]-->
 
     <?php
-    if (isset($scripts)) {
+    if (isset( $assets["js_header"] ))
+            foreach ( $assets["js_header"] as $script)
+                echo "<script src='" . $script . "'></script>";
 
-        if (is_array($scripts)) {
-
-            foreach ($scripts as $script) {
-
-                echo $script;
-            }
-        }
-    }
     ?>
-
-    <script src="<?=Render::getAssetsLocation()?>js/progressbar.js"></script>
 </head>

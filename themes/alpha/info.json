@@ -5,6 +5,36 @@
   "website":"https://github.com/dialtoneuk",
   "version": 1.0,
   "data":{
-    "mvc":true
+    "mvc":true,
+    "assets":{
+      "css":[
+        "bootstrap.min",
+        "bootstrap-combobox",
+        "custom"
+      ],
+      "js":[
+        "bootstrap.min"
+      ],
+      "js_header":[
+        "jquery",
+        "progressbar"
+      ],
+      "img":[
+        "art\\art_code",
+        "art\\art_prompt",
+        "art\\art_stockmarket",
+        "art\\art_synth",
+        "art\\art_login",
+        "art\\update",
+        "glythicons-halflings",
+        "glythicons-halflings-white",
+        "vibrant_blue",
+        "vibrant_cyan",
+        "vibrant_green",
+        "vibrant_red",
+        "vibrant_yellow",
+        "white"
+      ]
+    }
   }
 }

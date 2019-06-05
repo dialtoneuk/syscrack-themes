@@ -1,0 +1,12 @@
+{
+  "name":"Developer",
+  "description":"Allows you to look under the hood and see what exactly is being passed to each page you view. You'll need to change this back manually.",
+  "author":"Lewis Lancaster",
+  "website":"https://github.com/dialtoneuk",
+  "version": 1.0,
+  "data":{
+    "mvc":true,
+    "json":true,
+    "base":"alpha"
+  }
+}

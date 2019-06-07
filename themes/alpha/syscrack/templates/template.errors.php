@@ -5,10 +5,10 @@
 		foreach( $contents as $key=>$error )
 		{
 
-		    if( isset( $_SESSION["form"]["drawn"] ) == false )
-		        $_SESSION["form"]["drawn"] = [];
+		    if( isset( $model->session["data"]["form"]["drawn"] ) == false )
+		        $model->session["data"]["form"]["drawn"] = [];
 
-		    $_SESSION["form"]["drawn"][ $page ] = ["key" => $key, "modified" => time ()];
+		    $model->session["data"]["form"]["drawn"][ $page ] = ["key" => $key, "modified" => time ()];
 
 			if( isset( $error["success"] ) == true && $error["success"] )
 			{
@@ -31,6 +31,7 @@
 								else
 									echo @$error["message"];?>
                                 <span style="float: right;">
+                                    at <?=@$error["time"]?>
                                     <span class="glyphicon glyphicon-chevron-right"></span> <a href="/<?=$page?>"><?=$page?></a>
                                 </span>
                         </div>
@@ -49,7 +50,7 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <small>
-                                <span class="glyphicon glyphicon-exclamation-sign"></span> Process response:
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> Error!
                             </small>
                             <b>
 	                            <?php
@@ -61,7 +62,10 @@
 			                            echo @$error["message"];?>
                             </b>
                             <span style="float: right;">
-                                <span class="glyphicon glyphicon-chevron-right"></span> <a href="/<?=$page?>"><?=$page?></a>
+                                <span class="glyphicon glyphicon-time"></span>
+                                <?=@$error["time"]?>
+                                <span class="glyphicon glyphicon-file"></span>
+                                <a href="/<?=$page?>"><?=$page?></a>
                             </span>
                         </div>
                     </div>
@@ -72,18 +76,18 @@
 		}
 	};
 
-	if( isset( $_SESSION["form"] ) == false || empty( $_SESSION["form"] ) )
+	if( isset( $model->session["data"]["form"] ) == false || empty( $model->session["data"]["form"] ) )
 		return;
 
 	if( isset( $page ) == false )
     {
 
-	    foreach( $_SESSION["form"] as $page=>$contents )
+	    foreach( $model->session["data"]["form"] as $page=>$contents )
 	        if( $page !== "drawn")
-	            $render( $_SESSION["form"][ $page ], $page );
+	            $render( $model->session["data"]["form"][ $page ], $page );
     }
     else
-        if( isset( $_SESSION["form"][ $page ] ) )
-	        $render( $_SESSION["form"][ $page ],$page );
+        if( isset( $model->session["data"]["form"][ $page ] ) )
+	        $render( $model->session["data"]["form"][ $page ] ,$page );
 
 ?>

@@ -27,30 +27,30 @@
         </a>
     </div>
     <div class="list-group">
-        <a href="/admin/riddles/" class="list-group-item list-group-item">
+        <a href="/admin/riddles/" class="list-group-item">
             <h4 class="list-group-item-heading">Riddles</h4>
             <p class="list-group-item-text">View and edit your questions for players to answer. These can then
                 be linked with a computer you would like to send the player too when they have guessed correctly.</p>
         </a>
-        <a href="/admin/riddles/creator/" class="list-group-item list-group-item">
+        <a href="/admin/riddles/creator/" class="list-group-item">
             <h4 class="list-group-item-heading">Riddles Creator</h4>
             <p class="list-group-item-text">Create new questions for the player to answer.</p>
         </a>
     </div>
     <div class="list-group">
-        <a href="/admin/themes/" class="list-group-item list-group-item">
+        <a href="/admin/themes/" class="list-group-item">
             <h4 class="list-group-item-heading">Themes</h4>
             <p class="list-group-item-text">Change the look and feel of Syscrack.</p>
         </a>
-        <a href="/admin/settings/" class="list-group-item list-group-item">
+        <a href="/admin/settings/" class="list-group-item">
             <h4 class="list-group-item-heading">Settings</h4>
             <p class="list-group-item-text">Edit the settings.</p>
         </a>
     </div>
     <div class="list-group">
-        <a href="/admin/test/" class="list-group-item list-group-item-warning">
-            <h4 class="list-group-item-heading">Test</h4>
-            <p class="list-group-item-text">Helpful tools to debug the user interface.</p>
+        <a href="/admin/test/" class="list-group-item">
+            <h4 class="list-group-item-heading">Developer Test</h4>
+            <p class="list-group-item-text">Displays useful developer data.</p>
         </a>
         <a href="/admin/reset/" class="list-group-item list-group-item-danger">
             <h4 class="list-group-item-heading">Reset</h4>

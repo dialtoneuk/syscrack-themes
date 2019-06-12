@@ -42,7 +42,6 @@
             </p>
         </div>
     </div>
-
 	<?php
 		if (isset( $assets["js"]))
 			foreach ( $assets["js"] as $script)

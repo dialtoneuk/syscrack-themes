@@ -35,5 +35,4 @@ textarea {
 body, html{
     padding: 0.05%; !important;
     margin: 0; !important;
-    overflow-x: hidden;
 }

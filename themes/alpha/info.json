@@ -13,7 +13,8 @@
         "custom"
       ],
       "js":[
-        "bootstrap.min"
+        "bootstrap.min",
+        "custom"
       ],
       "js_header":[
         "jquery",

@@ -1,25 +1,31 @@
-var last_scroll = 0;
+$(document).ready(function()
+{
+
+    $('#scrollable').data("original_top",  $('#scrollable').css('top') );
+    $('#scrollable').data("padding",  962 );
+})
 
 $(document).scroll(function() {
 
 
-    if( $(this).height() > ( 1080 ) && $(this).width() > ( 1270 ) )
-        if( $(this).height() > ( 1080 * 5 ) )
-        {
-            if ($(this).scrollTop() < $(this).height() - ($(this).height() / 10.37 ))
-                $('#scrollable').animate({ top: $(this).scrollTop() }, 25,  "linear", function(){});
-        }
+    if( $(this).height() > ( 1080 * 2 ) && $(this).width() > ( 1370 ) )
+        if( $(this).scrollTop() < ( $(this).height() - ( $("#footer").height() ) ) -  $('#scrollable').data("padding")  )
+            $('#scrollable').animate({ top: $(this).scrollTop() }, 12,  "linear", function(){});
         else
-            if( $(this).scrollTop() < $(this).height() - ( $(this).height() / 5 ) )
-                $('#scrollable').animate({ top: $(this).scrollTop() }, 25,  "linear", function(){});
+            $('#scrollable').animate({ top: ( $(this).height() - ( $("#footer").height() ) ) -  $('#scrollable').data("padding") }, 12,  "linear", function(){});
+    else
+        $('#scrollable').css('top', $('#scrollable').data('original_top') );
 
-    last_scroll = $(this).scrollTop();
+    $('#scrollable').data('last_scroll',  $(this).scrollTop() )
 });
 
 $( window ).resize( function () {
-    if( $(this).width() > ( 1270 ) )
-        $('#scrollable').css('top', last_scroll - 124 );
+    if( $(this).width() > ( 1370 ) )
+        if( $(this).scrollTop() < ( $(this).height() - ( $("#footer").height() ) ) - $('#scrollable').data("padding")  )
+            $('#scrollable').css('top', $('#scrollable').data('last_scroll') );
+        else
+            $('#scrollable').animate({ top: ( $(this).height() - ( $("#footer").height() ) ) - $('#scrollable').data("padding") }, 6,  "linear", function(){});
     else
-        $('#scrollable').css('top', 0 );
+        $('#scrollable').css('top',  $('#scrollable').data('original_top') );
 })
 

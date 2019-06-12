@@ -1,4 +1,4 @@
-<footer>
+<footer id="footer">
     <?php
         if (isset($breadcrumb))
         {

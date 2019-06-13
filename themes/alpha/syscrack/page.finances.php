@@ -29,7 +29,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                     Total Cash
                 </div>
                 <div class="panel-body text-center">
-                    <h1><?= @$settings['syscrack_currency'] . number_format( @$cash )?></h1>
+                    <h1><?= @$settings['bank_currency'] . number_format( @$cash )?></h1>
                 </div>
             </div>
         </div>
@@ -118,7 +118,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                         <div class="col-sm-12">
                                             <div class="panel panel-default">
                                                 <div class="panel-body">
-                                                    <h5>Account #<?=$account->accountnumber?><small> at <?=@$metadata->custom["name"]?></small></h5>
+                                                    <h5>Account #<?=$account->accountnumber?><small> at <?php if( empty( @$metadata->custom["name"] ) ) { echo "Anoynmous Bank"; } else { echo @$metadata->custom["name"]; }?></small></h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -132,8 +132,8 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                         <li class="list-group-item">
                                             Bank Address
                                             <p class="right">
-                                                <a style="color: white;" href="/game/internet/<?= @$addresses[ $account->computerid ]?>">
-                                                    <?=  @$addresses[ $account->computerid ] ?>
+                                                <a style="color: white;" href="/game/internet/<?= @$ipaddresses[ $account->computerid ]?>">
+                                                    <?=  @$ipaddresses[ $account->computerid ] ?>
                                                 </a>
                                             </p>
                                         </li>
@@ -156,7 +156,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                 <div class="col-sm-12">
                                     <div class="panel panel-success">
                                         <div class="panel-body text-center">
-                                            <h5><?= @$settings['syscrack_currency'] . number_format($account->cash) ?></h5>
+                                            <h5><?= @$settings['bank_currency'] . number_format($account->cash) ?></h5>
                                         </div>
                                     </div>
                                 </div>

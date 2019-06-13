@@ -39,7 +39,7 @@
                                         Account Number
                                     </li>
                                     <li class="list-group-item">
-                                        <span class="badge"><?= $settings['syscrack_currency'] . number_format($account->cash) ?></span>
+                                        <span class="badge"><?= $settings['bank_currency'] . number_format($account->cash) ?></span>
                                         Balance
                                     </li>
                                 </ul>
@@ -76,7 +76,7 @@
                                     You currently don't have an account at this bank, but its free to create one! There
                                     is also a signup bonus
                                     of
-                                    <strong><?= $settings['syscrack_currency'] . number_format($settings['syscrack_bank_default_balance']) ?></strong>
+                                    <strong><?= $settings['bank_currency'] . number_format($settings['bank_default_balance']) ?></strong>
                                 </p>
 
                                 <form method="post" action="/game/internet/<?=$ipaddress?>/bank" style="width: 100%;">

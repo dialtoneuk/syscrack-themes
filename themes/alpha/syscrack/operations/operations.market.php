@@ -103,7 +103,7 @@
                                                             ?>
                                                                 <li class="list-group-item">
                                                                     <?= @$items[ $purchase["itemid"] ]['name'] ?>
-                                                                    for <?= @$settings['syscrack_currency'] . number_format(@$items[ $purchase["itemid"] ]['price']) ?>
+                                                                    for <?= @$settings['bank_currency'] . number_format(@$items[ $purchase["itemid"] ]['price']) ?>
                                                                     <span class="badge"
                                                                           style="float: right"><?= @date("F j, Y, g:i a", $purchase['timepurchased']) ?></span>
                                                                 </li>
@@ -163,7 +163,7 @@
                                                                     </li>
                                                                     <li class="list-group-item">
                                                                         Price <span
-                                                                                class="badge right"><?= @$settings['syscrack_currency'] . number_format($item['price']) ?></span>
+                                                                                class="badge right"><?= @$settings['bank_currency'] . number_format($item['price']) ?></span>
                                                                     </li>
                                                                 </ul>
                                                                 <?php

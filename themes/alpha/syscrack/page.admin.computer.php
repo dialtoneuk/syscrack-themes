@@ -59,7 +59,7 @@ if ( isset( $_GET['page'] ) )
         Render::view('syscrack/templates/template.admin.options');
 
         $computer = $computer_controller->getAllComputers()->toArray();
-        $pages = floor( count( $computer ) / $settings['syscrack_admin_computer_count'] );
+        $pages = floor( count( $computer ) / $settings['admin_computer_count'] );
         ?>
         <div class="col-md-8">
             <div class="row">
@@ -136,10 +136,10 @@ if ( isset( $_GET['page'] ) )
                 if (  isset( $_GET['page'] ) && $_GET['page'] != null )
                 {
 
-                    $offset = $_GET['page'] * $settings['syscrack_admin_computer_count'];
+                    $offset = $_GET['page'] * $settings['admin_computer_count'];
                 }
 
-                $computer = array_slice( array_reverse( $computer ), $offset, $settings['syscrack_admin_computer_count']);
+                $computer = array_slice( array_reverse( $computer ), $offset, $settings['admin_computer_count']);
 
                 if (empty($computer)) {
 

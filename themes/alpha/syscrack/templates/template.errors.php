@@ -26,7 +26,7 @@
 
 								if( empty( @$error["message"] ) )
 								{
-									echo $settings["alert_success_message"];
+									echo "Success";
 								}
 								else
 									echo @$error["message"];?>

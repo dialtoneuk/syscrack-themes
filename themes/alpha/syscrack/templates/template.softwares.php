@@ -108,21 +108,21 @@
                                     <td style="padding-top: 2.25%;">
                                         <?php
 
-                                        if ($software->level >= $settings['syscrack_software_level_godlike']) {
+                                        if ($software->level >= $settings['software_level_godlike']) {
 
                                             ?>
                                             <strong style="color: rebeccapurple;">
                                                 <?= $software->level ?>
                                             </strong>
                                             <?php
-                                        } elseif ($software->level >= $settings['syscrack_software_level_expert']) {
+                                        } elseif ($software->level >= $settings['software_level_expert']) {
 
                                             ?>
                                             <strong style="color: limegreen;">
                                                 <?= $software->level ?>
                                             </strong>
                                             <?php
-                                        } elseif ($software->level >= $settings['syscrack_software_level_advanced']) {
+                                        } elseif ($software->level >= $settings['software_level_advanced']) {
 
                                             ?>
                                             <strong style="color: indianred;">

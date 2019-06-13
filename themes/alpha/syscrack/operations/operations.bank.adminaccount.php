@@ -31,7 +31,7 @@
                         </p>
                         <ul class="list-group">
                             <li class="list-group-item list-group-item-success">
-                                <h2><?=@$settings['syscrack_currency'] . number_format($account->cash)?></h2>
+                                <h2><?=@$settings['bank_currency'] . number_format($account->cash)?></h2>
                             </li>
                             <li class="list-group-item">
                                 Database Address <span class="badge right"><?=@ $ipaddress ?></span>
@@ -83,7 +83,7 @@
 
                                                     ?>
                                                     <li class="list-group-item">
-                                                        #<?=@$user_account->accountnumber?> at <?=@$accounts_location[$key]["ipaddress"]?> <span class="badge right"><?=@$settings["syscrack_currency"] . @$user_account->cash ?></span>
+                                                        #<?=@$user_account->accountnumber?> at <?=@$accounts_location[$key]["ipaddress"]?> <span class="badge right"><?=@$settings["bank_currency"] . @$user_account->cash ?></span>
                                                     </li>
                                                     <?php
                                                 }

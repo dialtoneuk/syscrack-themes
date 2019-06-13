@@ -32,7 +32,7 @@
 
                             <?php
 
-                                if ( $computer->type == $settings['syscrack_computers_market_type'] )
+                                if ( $computer->type == $settings['computers_market_type'] )
                                 {
 
                                     ?>
@@ -230,7 +230,7 @@
 
                                                 foreach ($hardwares as $type => $hardware) {
 
-                                                    $icons = $settings['syscrack_hardware_icons'];
+                                                    $icons = $settings['hardware_icons'];
 
                                                     ?>
                                                     <div class="panel panel-info">
@@ -268,7 +268,7 @@
                                                                             echo (string)$hardware['value'];
                                                                         }
 
-                                                                        $extensions = $settings['syscrack_hardware_extensions'];
+                                                                        $extensions = $settings['hardware_extensions'];
 
                                                                         if (isset($extensions[$type])) {
 

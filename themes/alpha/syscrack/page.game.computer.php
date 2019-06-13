@@ -35,7 +35,7 @@
                                         ?>
                                         <form method="post" action="/game/computer/">
                                             <p>
-                                                You may purchase a band new computer for <?= number_format( count( $computers) * ( $settings['syscrack_vpc_purchase_price'] * $settings['syscrack_vpc_purchase_increase'] ) ) ?>
+                                                You may purchase a brand new computer for <?= number_format( count( $computers) * ( $settings['vpc_purchase_price'] * $settings['vpc_purchase_increase'] ) ) ?>
                                             </p>
                                             <?php
                                                 Render::view("syscrack/templates/template.account.search", array('values' => @$accounts ) );

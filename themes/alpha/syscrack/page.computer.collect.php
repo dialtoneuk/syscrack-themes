@@ -32,7 +32,7 @@ if ($session->isLoggedIn()) {
 
 $currentcomputer = $computer_controller->getComputer($computer_controller->computerid());
 
-if ($computer_controller->hasType($currentcomputer->computerid, $settings['syscrack_software_collector_type'], true) == false) {
+if ($computer_controller->hasType($currentcomputer->computerid, $settings['software_collector_type'], true) == false) {
 
     throw new ViewException();
 }
@@ -124,7 +124,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                                 ?>
                                                 <option value="<?= $account->accountnumber ?>">
                                                     #<?= $account->accountnumber ?>
-                                                    (<?= $settings['syscrack_currency'] . number_format($account->cash) ?>
+                                                    (<?= $settings['bank_currency'] . number_format($account->cash) ?>
                                                     )
                                                     @<?= $computer_controller->getComputer($account->computerid)->ipaddress ?></option>
                                                 <?php
@@ -171,9 +171,9 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                 <div class="panel-body">
                                     <h1>
                                         <?php if (isset($total) == false) {
-                                            echo $settings['syscrack_currency'] . '0';
+                                            echo $settings['bank_currency'] . '0';
                                         } else {
-                                            echo $settings['syscrack_currency'] . number_format($total);
+                                            echo $settings['bank_currency'] . number_format($total);
                                         } ?>
                                         <small>
                                             Profits Generated

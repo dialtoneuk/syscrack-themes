@@ -117,7 +117,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                     <div class="btn-group btn-group-justified" role="group" aria-label="...">
                         <div class="btn-group" role="group">
                             <button type="button"
-                                    onclick="window.location.href = '<?= $settings['syscrack_discord_main'] ?>'"
+                                    onclick="window.location.href = '<?= $settings['discord_main'] ?>'"
                                     class="btn btn-info">Join Discord
                             </button>
                         </div>

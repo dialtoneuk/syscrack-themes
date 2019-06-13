@@ -25,7 +25,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
             <form class="form-group" method="post">
 
                 <?php
-                $schema = $settings['syscrack_example_schema'];
+                $schema = $settings['example_schema'];
                 ?>
                 <div class="row">
                     <div class="col-lg-4">
@@ -44,7 +44,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                         'type' => 'number',
                                         'name' => 'userid',
                                         'placeholder' => 1,
-                                        'value' => $settings['syscrack_master_user'],
+                                        'value' => $settings['user'],
                                         'icon' => 'glyphicon-user'
                                     ],
                                     [

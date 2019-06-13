@@ -56,7 +56,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 
                     foreach ($hardwares as $type => $hardware) {
 
-                        $icons = $settings['syscrack_hardware_icons'];
+                        $icons = $settings['hardware_icons'];
 
                         ?>
                         <div class="panel panel-info">
@@ -94,7 +94,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                                 echo (string)$hardware['value'];
                                             }
 
-                                            $extensions = $settings['syscrack_hardware_extensions'];
+                                            $extensions = $settings['hardware_extensions'];
 
                                             if (isset($extensions[$type])) {
 

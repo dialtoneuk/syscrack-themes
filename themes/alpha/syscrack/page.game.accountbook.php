@@ -123,7 +123,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                         <div class="col-sm-4">
                                             <div class="well-lg">
                                                 <h1>
-                                                    <?= $settings['syscrack_currency'] . number_format($account->cash) ?>
+                                                    <?= $settings['bank_currency'] . number_format($account->cash) ?>
                                                 </h1>
                                             </div>
                                         </div>

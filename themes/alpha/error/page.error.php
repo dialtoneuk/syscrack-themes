@@ -58,7 +58,7 @@
 
                                 $_GET['redirect'] = htmlspecialchars( $_GET['redirect'], ENT_QUOTES, 'UTF-8' );
 
-                                if( strlen( $_GET['redirect'] ) < $settings['controller_url_length'] )
+                                if( strlen( $_GET['redirect'] ) < \Framework\Application::globals()->MAX_URL_LENGTH )
                                 {
 
                                     ?>

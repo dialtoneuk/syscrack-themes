@@ -230,9 +230,9 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 
                                                                             $extension = $softwares->getSoftwareExtension($softwares->getSoftwareNameFromSoftwareID($value['softwareid']));
 
-                                                                            $price = $settings['syscrack_research_price_multiplier'] * $software->level;
+                                                                            $price = $settings['research_price_multiplier'] * $software->level;
 
-                                                                            echo('<option value="' . $software->softwareid . '">' . $software->softwarename . $extension . ' ' . $software->size . 'mb (' . $software->level . ') ' . $settings['syscrack_currency'] . $price . '</option>');
+                                                                            echo('<option value="' . $software->softwareid . '">' . $software->softwarename . $extension . ' ' . $software->size . 'mb (' . $software->level . ') ' . $settings['bank_currency'] . $price . '</option>');
                                                                         }
                                                                     }
                                                                     ?>
@@ -252,7 +252,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                                         ?>
                                                         <option value="<?= $account->accountnumber ?>">
                                                             #<?= $account->accountnumber ?>
-                                                            (<?= $settings['syscrack_currency'] . number_format($account->cash) ?>
+                                                            (<?= $settings['bank_currency'] . number_format($account->cash) ?>
                                                             )
                                                             @<?= $computer_controller->getComputer($account->computerid)->ipaddress ?></option>
                                                         <?php
@@ -315,9 +315,9 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 
                                             $extension = $softwares->getSoftwareExtension($softwares->getSoftwareNameFromSoftwareID($value['softwareid']));
 
-                                            $price = $settings['syscrack_research_price_multiplier'] * $software->level;
+                                            $price = $settings['research_price_multiplier'] * $software->level;
 
-                                            echo('<option value="' . $software->softwareid . '">' . $software->softwarename . $extension . ' ' . $software->size . 'mb (' . $software->level . ') ' . $settings['syscrack_currency'] . $price . '</option>');
+                                            echo('<option value="' . $software->softwareid . '">' . $software->softwarename . $extension . ' ' . $software->size . 'mb (' . $software->level . ') ' . $settings['bank_currency'] . $price . '</option>');
                                         }
                                     }
                                     ?>
@@ -347,7 +347,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                             ?>
                                             <option value="<?= $account->accountnumber ?>">
                                                 #<?= $account->accountnumber ?>
-                                                (<?= $settings['syscrack_currency'] . number_format($account->cash) ?>
+                                                (<?= $settings['bank_currency'] . number_format($account->cash) ?>
                                                 )
                                                 @<?= $computer_controller->getComputer($account->computerid)->ipaddress ?></option>
                                             <?php

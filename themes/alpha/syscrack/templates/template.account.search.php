@@ -8,7 +8,7 @@
 
                 ?>
                 <option value="<?= $account->accountnumber ?>">#<?= $account->accountnumber ?>
-                    (<?= $settings['syscrack_currency'] . number_format($account->cash) ?>
+                    (<?= $settings['bank_currency'] . number_format($account->cash) ?>
                     ) @<?=@$ipaddresses[ $account->computerid ]?></option>
                 <?php
             }

@@ -1,7 +1,7 @@
 <?php
 foreach ($hardwares as $type => $hardware)
 {
-    $icons = $settings['syscrack_hardware_icons'];
+    $icons = $settings['hardware_icons'];
 ?>
     <div class="row">
         <div class="col-lg-12">
@@ -37,7 +37,7 @@ foreach ($hardwares as $type => $hardware)
                                     echo (string)$hardware['value'];
                                 }
 
-                                $extensions = $settings['syscrack_hardware_extensions'];
+                                $extensions = $settings['hardware_extensions'];
 
                                 if (isset($extensions[$type])) {
 

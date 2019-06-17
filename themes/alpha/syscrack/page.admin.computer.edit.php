@@ -32,7 +32,7 @@
 
                             <?php
 
-                                if ( $computer->type == $settings['computers_market_type'] )
+                                if ( $computer->type == $settings['computers_type_market'] )
                                 {
 
                                     ?>

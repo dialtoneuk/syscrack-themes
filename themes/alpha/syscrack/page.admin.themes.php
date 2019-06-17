@@ -67,7 +67,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                                 <h3><?=$theme['name']?>  <small>version <?=$theme["version"]?></small></h3>
                                                 <h4 class="small">Created by <a href="<?=$theme["website"]?>"><?=$theme["author"]?></a></h4>
                                                 <p><?=$theme['description']?></p>
-                                                <form method="post">
+                                                <form method="post" id="<?=$folder?>" >
                                                 <?php
                                                     if( $folder == $settings["theme_folder"] )
                                                     {
@@ -83,8 +83,8 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                                     {
                                                         ?>
 
-                                                                <button style="width: 100%;"
-                                                                        class="btn btn-default btn-sml" type="submit">
+                                                                <button  style="width: 100%;"
+                                                                        class="btn btn-default btn-sml" data-content="<?=$folder?>" type="submit">
                                                                     <span class="glyphicon glyphicon-check"
                                                                           aria-hidden="true"></span> Switch
                                                                 </button>

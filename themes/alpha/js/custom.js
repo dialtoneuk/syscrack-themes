@@ -1,8 +1,20 @@
+$("button").click(function()
+{
+    var attr = $( this ).attr("data-content");
+    $( this ).attr("disabled", true );
+
+    if( attr !== 'undefined' )
+        $( "#" + attr  ).submit()
+    else
+        $("form").submit();
+})
+
+
 $(document).ready(function()
 {
 
     $('#scrollable').data("original_top",  $('#scrollable').css('top') );
-    $('#scrollable').data("padding",  962 );
+    $('#scrollable').data("padding",  1028 );
 })
 
 $(document).scroll(function() {

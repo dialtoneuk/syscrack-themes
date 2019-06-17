@@ -69,7 +69,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                                 <p><?=$theme['description']?></p>
                                                 <form method="post">
                                                 <?php
-                                                    if( $folder == $settings["render_folder"] )
+                                                    if( $folder == $settings["theme_folder"] )
                                                     {
                                                         ?>
 

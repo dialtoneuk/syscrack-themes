@@ -14,9 +14,9 @@
 			{
 				?>
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div id="error<?=$key?>" class="alert alert-success" role="alert">
-                            <button type="button" style="padding-left: 5px;" class="close" data-dismiss="alert" aria-label="Close">
+                            <button type="button" style="padding-left: 5px;" class="close" data-content="none" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             <small>
@@ -31,8 +31,10 @@
 								else
 									echo @$error["message"];?>
                                 <span style="float: right;">
-                                    at <?=@$error["time"]?>
-                                    <span class="glyphicon glyphicon-chevron-right"></span> <a href="/<?=$page?>"><?=$page?></a>
+                                    <span class="glyphicon glyphicon-time"></span>
+                                    <?=@$error["time"]?>
+                                    <span class="glyphicon glyphicon-file"></span>
+                                    <a href="/<?=$page?>"><?=$page?></a>
                                 </span>
                         </div>
                     </div>
@@ -44,7 +46,7 @@
 
 				?>
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div id="error<?=$key?>" class="alert alert-danger" role="alert">
                             <button type="button" style="padding-left: 5px;" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>

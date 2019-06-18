@@ -16,11 +16,11 @@ if (isset($process))
 	    $duration = $process->timecompleted - time();
 
     ?>
-    <div class="col-sm-12">
+    <div class="col-md-12">
         <div class="panel <?=$panel?>">
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-md-10">
                         <p>
                             <span class="glyphicon glyphicon-arrow-right"></span> <?= $process->process?> at <a
                                     href="/game/internet/<?= $data['ipaddress'] ?>/"><?= $data['ipaddress'] ?></a> <span
@@ -71,7 +71,7 @@ if (isset($process))
                         }
                         ?>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-md-2">
                         <div style="height: 100%; width: 100%; margin-left: auto; margin-right: auto; margin-top: 24px;">
                             <div id="progressbar<?= $process->processid ?>"></div>
                         </div>
@@ -113,7 +113,7 @@ if (isset($process))
 
         <?php
                 if( $duration > 0 )
-                    echo("line.animate(" . ( 1000 / ( $duration * (  $process->timecompleted - time() ) ) ) / 0.5 . ")");
+                    echo("line.animate(" . ( 1000 / ( $duration * (  $process->timecompleted - time() ) ) )  . ")");
                 else
                     echo("line.animate(1)");
         ?>

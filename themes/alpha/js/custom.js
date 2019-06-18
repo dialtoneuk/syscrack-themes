@@ -1,18 +1,30 @@
+$('#ipaddress').keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13')
+        window.location.href = '/game/internet/' + $('#ipaddress').val();
+});
+
 $("button").click(function()
 {
     var attr = $( this ).attr("data-content");
-    $( this ).attr("disabled", true );
 
-    if( attr !== 'undefined' )
-        $( "#" + attr  ).submit()
+    if( attr !== null )
+    {
+
+        if( attr !== undefined )
+            $( "#" + attr  ).submit();
+        else if( atrr !== "none" )
+            $("form").submit();
+
+        if( attr !== "none" )
+            $( this ).attr("disabled", true );
+    }
     else
-        $("form").submit();
+        $( this ).attr("disabled", true );
 })
-
 
 $(document).ready(function()
 {
-
     $('#scrollable').data("original_top",  $('#scrollable').css('top') );
     $('#scrollable').data("padding",  1028 );
 })

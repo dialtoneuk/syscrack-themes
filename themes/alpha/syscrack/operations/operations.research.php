@@ -9,7 +9,7 @@
         <div class="container">
             <?php Render::view('syscrack/templates/template.navigation'); ?>
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <?php
                             if (isset($_GET['error']))
                                 Render::view('syscrack/templates/template.alert', array('message' => $_GET['error']));
@@ -19,14 +19,14 @@
                     </div>
                 </div>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-md-12">
                     <h2 style="color: #ababab" class="text-uppercase">
                         Research Centre <small style="float: right;">Executing from [<?=@$computer->ipaddress ?>] <a href="/game/computer">Switch?</a></small>
                     </h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <div class="row">
                         <?php
                         $usedspace = 0;
@@ -35,12 +35,12 @@
                             foreach( $localsoftwares as $software )
                                 $usedspace += @$software->size;
                         ?>
-                        <div class="col-lg-12">
+                        <div class="col-md-12">
                             <?php Render::view('syscrack/templates/template.storage', array( 'hardwares' => json_decode( $computer->hardware, true ), 'usedspace' => $usedspace ) ); ?>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-md-12">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a data-toggle="tab" href="#licenced">Licenses</a></li>
                                 <li><a data-toggle="tab" href="#licence">Purchae</a></li>

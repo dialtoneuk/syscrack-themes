@@ -14,14 +14,14 @@ use Framework\Application\Render;
             Render::view('syscrack/templates/template.errors');
         ?>
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-md-12">
                 <img style="width: 100%; height: 100%; border-radius: 5px;" src="<?=@$assets["img"][4]?>">
             </div>
         </div>
         <div class="row" style="margin-top: 12px">
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-body text-center">
                                 <h1>
@@ -36,7 +36,7 @@ use Framework\Application\Render;
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-body text-center">
                                 <h1>
@@ -51,7 +51,7 @@ use Framework\Application\Render;
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <form method="post">
                     <?php
 
@@ -114,9 +114,9 @@ use Framework\Application\Render;
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-body text-center">
                                 <h1>
@@ -131,7 +131,7 @@ use Framework\Application\Render;
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-body text-center">
                                 <h1>

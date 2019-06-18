@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer id="footer" style="margin-top: 8px;">
     <?php
         if (isset($breadcrumb))
         {
@@ -35,7 +35,7 @@
         }
     ?>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
             <p class="small text-center" style="color: lightgray;">
                 Syscrack 2017 was created by <a href="http://www.github.com/dialtoneuk/">Lewis Lancaster</a> and we
                 loaded in <?= 0 ?> seconds

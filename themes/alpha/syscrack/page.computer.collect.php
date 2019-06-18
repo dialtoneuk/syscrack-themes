@@ -54,7 +54,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 		Render::view('syscrack/templates/template.errors');
 	?>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
             <?php
 
             if (isset($_GET['error']))
@@ -65,7 +65,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12" onclick="window.location.href = '/computer/'">
+        <div class="col-md-12" onclick="window.location.href = '/computer/'">
             <h5 style="color: #ababab" class="text-uppercase">
                 <span class="badge"><?= $currentcomputer->type ?></span> <?= $currentcomputer->ipaddress ?>
             </h5>
@@ -79,7 +79,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
         ?>
         <div class="col-md-8">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-body">
                         <?php
@@ -97,7 +97,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-md-12">
                     <div class="panel panel-info">
                         <div class="panel-body text-center">
                             <?php
@@ -152,7 +152,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                     if (empty($results)) {
 
                         ?>
-                        <div class="col-sm-12">
+                        <div class="col-md-12">
                             <div class="panel panel-info">
                                 <div class="panel-heading">
                                     Results not found
@@ -166,7 +166,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                     } else {
 
                         ?>
-                        <div class="col-sm-12">
+                        <div class="col-md-12">
                             <div class="panel panel-info">
                                 <div class="panel-body">
                                     <h1>
@@ -220,7 +220,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 } else {
 
                     ?>
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-body text-center">
                                 Your profits will appear here when the collection process has completed
@@ -234,7 +234,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
             <?php
 
             Render::view('syscrack/templates/template.footer', array('breadcrumb' => true));

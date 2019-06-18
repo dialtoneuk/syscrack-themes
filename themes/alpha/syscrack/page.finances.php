@@ -23,7 +23,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 		Render::view('syscrack/templates/template.errors');
 	?>
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <div class="panel panel-success">
                 <div class="panel-heading">
                     Total Cash
@@ -33,7 +33,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Number of Accounts
@@ -45,7 +45,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Accounts Hacked <a style="float: right;" href="/game/accountbook">Go to Account Book</a>
@@ -115,7 +115,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                     ?>
 
                                     <div class="row">
-                                        <div class="col-sm-12">
+                                        <div class="col-md-12">
                                             <div class="panel panel-default">
                                                 <div class="panel-body">
                                                     <h5>Account #<?=$account->accountnumber?><small> at <?php if( empty( @$metadata->custom["name"] ) ) { echo "Anoynmous Bank"; } else { echo @$metadata->custom["name"]; }?></small></h5>
@@ -127,7 +127,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                 }
                             ?>
                             <div class="row">
-                                <div class="col-sm-12">
+                                <div class="col-md-12">
                                     <ul class="list-group">
                                         <li class="list-group-item">
                                             Bank Address
@@ -142,10 +142,6 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                             <p><?= @$account->accountnumber ?></p>
                                         </li>
                                         <li class="list-group-item">
-                                            <small>Account ID</small>
-                                            <p><?= @$account->accountid ?></p>
-                                        </li>
-                                        <li class="list-group-item">
                                             <small>Time Created</small>
                                             <p><?= @date("F j, Y, g:i a", $account->timecreated) ?><p>
                                         </li>
@@ -153,7 +149,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-12">
+                                <div class="col-md-12">
                                     <div class="panel panel-success">
                                         <div class="panel-body text-center">
                                             <h5><?= @$settings['bank_currency'] . number_format($account->cash) ?></h5>

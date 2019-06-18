@@ -14,10 +14,10 @@
             <?php
             Render::view('syscrack/templates/template.admin.options');
             ?>
-            <div class="col-sm-8">
+            <div class="col-md-8">
 
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <div class="input-group">
@@ -37,19 +37,19 @@
 
                         ?>
                             <div class="row">
-                                <div class="col-sm-12">
+                                <div class="col-md-12">
                                     <div class="panel panel-info">
                                         <div class="panel-body">
                                             <div class="row">
-                                                <div class="col-sm-3">
+                                                <div class="col-md-3">
                                                     <span class="badge" style="font-size: 2em;"><?=$value->userid?></span><span class="badge" style="margin-left: 5%;"><?=$value->group?></span>
                                                 </div>
-                                                <div class="col-sm-5">
+                                                <div class="col-md-5">
                                                     <h5>
                                                         <?=htmlspecialchars($value->username)?>
                                                     </h5>
                                                 </div>
-                                                <div class="col-sm-4">
+                                                <div class="col-md-4">
                                                     <div class="btn-group" style="float: right;" role="group" aria-label="...">
                                                         <button type="button" onclick="window.location.href = '/admin/users/edit/<?=$value->userid?>/'"class="btn btn-success">Edit</button>
                                                     </div>

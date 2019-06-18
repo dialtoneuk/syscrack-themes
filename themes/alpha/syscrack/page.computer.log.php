@@ -13,7 +13,7 @@
 		        Render::view('syscrack/templates/template.errors');
 	        ?>
             <div class="row">
-                <div class="col-sm-12" onclick="window.location.href = '/computer/'">
+                <div class="col-md-12" onclick="window.location.href = '/computer/'">
                     <h5 style="color: #ababab" class="text-uppercase">
                         <span class="badge"><?= $computer->type ?></span> <?= $computer->ipaddress ?>
                     </h5>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-md-12">
                     <?php
                         Render::view('syscrack/templates/template.footer', array('breadcrumb' => true));
                     ?>

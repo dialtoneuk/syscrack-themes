@@ -19,16 +19,16 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 
             Render::view('syscrack/templates/template.admin.options');
             ?>
-            <div class="col-sm-8">
+            <div class="col-md-8">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <h5 style="color: #ababab" class="text-uppercase">
                             Themes
                         </h5>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div class="panel panel-info">
                             <div class="panel-body">
                                 Please look at our github wiki for more information on installing themes and creating
@@ -43,7 +43,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                     {
                         ?>
                             <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-md-12">
                                     <div class="panel panel-default">
                                         <div class="panel-body">
                                             Sorry no themes available!
@@ -61,7 +61,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 
                             ?>
                                 <div class="row">
-                                    <div class="col-lg-12">
+                                    <div class="col-md-12">
                                         <div class="thumbnail">
                                             <div class="caption">
                                                 <h3><?=$theme['name']?>  <small>version <?=$theme["version"]?></small></h3>

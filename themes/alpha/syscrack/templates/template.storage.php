@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-lg-12">
+    <div class="col-md-12">
         <?php
             if( isset( $hardwares["harddrive"] ) == false )
             {
@@ -26,21 +26,21 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-md-4">
                             <div class="panel panel-danger">
                                 <div class="panel-body text-center">
                                     <h2><small>Used Space</small> <?=$usedspace?>mbs</h2>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-md-4">
                             <div class="panel panel-success">
                                 <div class="panel-body text-center">
                                     <h2><small>Free Space</small> <?=$freespace?>mbs</h2>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-md-4">
                             <div class="panel panel-default">
                                 <div class="panel-body text-center">
                                     <h2><small>Total Space</small> <?=$space?>mbs</h2>

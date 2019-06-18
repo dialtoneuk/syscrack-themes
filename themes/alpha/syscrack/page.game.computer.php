@@ -19,9 +19,9 @@
 		        Render::view('syscrack/templates/template.errors');
 	        ?>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-md-4">
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-md-12">
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
                                     Buy VPC
@@ -33,7 +33,7 @@
                                     {
 
                                         ?>
-                                        <form method="post" action="/game/computer/">
+                                        <form method="post" id="purchase" action="/game/computer/">
                                             <p>
                                                 You may purchase a brand new computer for <?= number_format( count( $computers) * ( $settings['vpc_purchase_price'] * $settings['vpc_purchase_increase'] ) ) ?>
                                             </p>
@@ -42,7 +42,7 @@
                                             ?>
                                             <div class="btn-group btn-group-justified" role="group" aria-label="..." style="margin-top: 2.5%;">
                                                 <div class="btn-group" role="group">
-                                                    <button type="submit" class="btn btn-success">Purchase
+                                                    <button type="submit" data-content="purchase" class="btn btn-success">Purchase
                                                     </button>
                                                 </div>
                                             </div>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-md-12">
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <h4>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-md-12">
                             <div class="panel panel-info">
                                 <div class="panel-heading">
                                     Want more information?
@@ -95,21 +95,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-8">
+                <div class="col-md-8">
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-md-12">
                             <h4>
                                 Current Machine
                             </h4>
                             <div class="panel panel-success">
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-md-4">
                                             <h5>
                                                 <?=$computer->ipaddress?> <span class="badge" style="float: right;"><?=$computer->type?></span>
                                             </h5>
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div class="col-md-8">
                                             <button style="width: 100%;" class="btn btn-success"
                                                     onclick="window.location.href = '/computer/'">
                                                 <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> View Machine
@@ -121,7 +121,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-md-12">
                             <h4>
                                 Computers on your network
                             </h4>
@@ -137,19 +137,19 @@
 
                     ?>
                         <div class="row">
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <div class="panel panel-primary"  id="<?= $value->ipaddress ?>">
                                     <div class="panel-body">
                                         <div class="row">
-                                            <div class="col-sm-4">
+                                            <div class="col-md-4">
                                                 <h5>
                                                     <?=$value->ipaddress?> <span class="badge" style="float: right;"><?=$value->type?></span>
                                                 </h5>
                                             </div>
-                                            <div class="col-sm-8">
-                                                <form method="post" action="/game/computer/switch/<?=$value->computerid?>">
+                                            <div class="col-md-8">
+                                                <form method="post" id="form<?=$value->computerid?>" action="/game/computer/switch/<?=$value->computerid?>">
                                                     <button style="width: 100%;" class="btn btn-default"
-                                                            name="action" value="licensesoftware" type="submit">
+                                                            name="action" value="licensesoftware" data-content="form<?=$value->computerid?>" type="submit">
                                                         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Switch
                                                     </button>
                                                 </form>

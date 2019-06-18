@@ -30,7 +30,7 @@
                 Render::view('syscrack/templates/template.navigation');
             ?>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-md-12">
                     <?php
 
                     if (isset($_GET['error']))
@@ -41,16 +41,16 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-md-12">
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-md-4">
                             <div class="panel panel-primary">
                                 <div class="panel-body">
                                     Solve this riddle in order to progress to the next computer!
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-8">
+                        <div class="col-md-8">
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <form method="post">

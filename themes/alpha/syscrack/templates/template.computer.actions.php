@@ -11,13 +11,21 @@ if (isset($computer_controller) == false) {
 $currentcomputer = $computer_controller->getComputer($computer_controller->computerid());
 ?>
 <div class="col-md-4">
+    <div class="panel panel-info">
+        <div class="panel-body text-center">
+            <h2>
+                <?=@$computer->type?> OS v1.0
+            </h2>
+            <small>Welcome <a><?=@$model->user["username"]?></a></small>
+        </div>
+    </div>
     <div class="list-group">
         <a href="/computer/" class="list-group-item">
-            <h4 class="list-group-item-heading">Desktop</h4>
-            <p class="list-group-item-text">View your current softwares.</p>
+            <h4 class="list-group-item-heading">Software</h4>
+            <p class="list-group-item-text">View the contents of your drive.</p>
         </a>
         <a href="/computer/log/" class="list-group-item">
-            <h4 class="list-group-item-heading">Log</h4>
+            <h4 class="list-group-item-heading">Access Logs</h4>
             <p class="list-group-item-text">View your computers system log.</p>
         </a>
         <a href="/computer/processes/" class="list-group-item">
@@ -27,6 +35,10 @@ $currentcomputer = $computer_controller->getComputer($computer_controller->compu
         <a href="/computer/hardware/" class="list-group-item">
             <h4 class="list-group-item-heading">Hardware</h4>
             <p class="list-group-item-text">View your system hardware.</p>
+        </a>
+        <a href="/computer/preferences/" class="list-group-item">
+            <h4 class="list-group-item-heading">Preferences</h4>
+            <p class="list-group-item-text">View your system preferences.</p>
         </a>
     </div>
     <?php

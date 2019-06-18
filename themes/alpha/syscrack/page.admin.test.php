@@ -12,9 +12,9 @@
 		?>
         <div class="row">
 	        <?php Render::view('syscrack/templates/template.admin.options'); ?>
-            <div class="col-sm-8">
+            <div class="col-md-8">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <h1>
                             Session
                         </h1>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <h1>
                             Request
                         </h1>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <h1>
                             Errors
                         </h1>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <form method="post">
                             <div class="btn-group btn-group-justified" role="group" aria-label="...">
                                 <input type="hidden" name="type" value="error">
@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <form method="post">
                             <div class="btn-group btn-group-justified" role="group" aria-label="...">
                                 <input type="hidden" name="type" value="success">
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <form method="post">
                             <div class="btn-group btn-group-justified" role="group" aria-label="...">
                                 <input type="hidden" name="type" value="success">

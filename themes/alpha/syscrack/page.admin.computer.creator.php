@@ -18,7 +18,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 
         Render::view('syscrack/templates/template.admin.options');
         ?>
-        <div class="col-sm-8">
+        <div class="col-md-8">
             <h5 style="color: #ababab" class="text-uppercase">
                 Computer Creator
             </h5>
@@ -28,7 +28,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 $schema = $settings['example_schema'];
                 ?>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-md-4">
                         <div class="panel panel-info">
                             <div class="panel-body">
                                 When you create your new machine you'll be able to edit it in more detail. Don't worry about
@@ -75,7 +75,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-md-8">
                         <?php
                         Render::view('syscrack/templates/template.form', array('form_elements' => [
                             [
@@ -97,7 +97,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <?php
@@ -132,7 +132,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div class="btn-group btn-group-justified" role="group" aria-label="Submit">
                             <div class="btn-group" role="group">
                                 <button type="submit" class="btn btn-default">Create</button>

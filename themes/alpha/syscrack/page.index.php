@@ -26,7 +26,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 		Render::view('syscrack/templates/template.errors');
 	?>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
             <div style="background: black; height: 400px;" id="carousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -78,7 +78,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
         </div>
     </div>
     <div class="row" style="margin-top: 12px;">
-        <div class="col-sm-12">
+        <div class="col-md-12">
             <div class="panel panel-default" style="padding: 2%;">
                 <h5 class="text-center text-uppercase">
                     An Open Source Hacking Simulator, simulated on a Virtual Internet
@@ -87,7 +87,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-body text-center">
                     <h1>
@@ -99,7 +99,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-body text-center">
                     <h1>
@@ -112,7 +112,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-body text-center">
                     <h1>
@@ -126,7 +126,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
             <div class="panel panel-default" style="padding: 2%;">
                 <h5 class="text-center text-uppercase">
                     Become the hacker you always wanted to be
@@ -210,7 +210,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
             <div class="panel panel-default" style="padding: 2%;">
                 <h5 class="text-center text-uppercase">
                     Change the future and be the controller of the fate of the internet
@@ -219,7 +219,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-body text-center">
                     <h1>
@@ -235,7 +235,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-body text-center">
                     <h1>
@@ -251,7 +251,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-body text-center">
                     <h1>

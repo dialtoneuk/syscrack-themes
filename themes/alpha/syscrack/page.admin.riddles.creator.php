@@ -20,7 +20,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 
         Render::view('syscrack/templates/template.admin.options');
         ?>
-        <div class="col-sm-8">
+        <div class="col-md-8">
             <h5 style="color: #ababab" class="text-uppercase">
                 Riddles Creator
             </h5>

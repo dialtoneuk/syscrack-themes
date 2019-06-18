@@ -16,12 +16,12 @@
         <?php
             Render::view('syscrack/templates/template.admin.options');
         ?>
-        <div class="col-sm-8">
+        <div class="col-md-8">
             <h5 style="color: #ababab" class="text-uppercase">
                 Admin
             </h5>
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-md-6">
                     <div class="panel panel-success">
                         <div class="panel-heading">
                             Users
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-md-6">
                     <div class="panel panel-success">
                         <div class="panel-heading">
                             Online

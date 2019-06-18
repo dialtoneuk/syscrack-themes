@@ -1,29 +1,6 @@
 <?php
-
-use Framework\Application\UtilitiesV2\Container;
-use Framework\Application\Render;
-use Framework\Syscrack\Game\Computer;
-use Framework\Syscrack\Game\Operations;
-use Framework\Syscrack\Game\Utilities\PageHelper;
-
-$computer_controller = new Computer();
-
-$pagehelper = new PageHelper();
-
-$operations = new Operations();
-
-$session = Container::get('session');
-
-if ($session->isLoggedIn()) {
-
-    $session->updateLastAction();
-}
-
-$currentcomputer = $computer_controller->getComputer($computer_controller->computerid());
-
-$processes = $operations->getComputerProcesses($currentcomputer->computerid);
+    use Framework\Application\Render;
 ?>
-
 <!DOCTYPE html>
 <html>
 
@@ -38,7 +15,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 		Render::view('syscrack/templates/template.errors');
 	?>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
 
             <?php
 
@@ -50,7 +27,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12" onclick="window.location.href = '/computer/'">
+        <div class="col-md-12" onclick="window.location.href = '/computer/'">
             <h5 style="color: #ababab" class="text-uppercase">
                 <span class="badge"><?= $currentcomputer->type ?></span> <?= $currentcomputer->ipaddress ?>
             </h5>
@@ -59,47 +36,51 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
     <div class="row" style="margin-top: 1.5%;">
 
         <?php
-
-        Render::view('syscrack/templates/template.computer.actions', array('computer_controller' => $computer_controller));
+            Render::view('syscrack/templates/template.computer.actions');
         ?>
         <div class="col-md-8">
 
             <?php
 
             if (empty($processes) == false) {
-
-                foreach ($processes as $process) {
-
-                    ?>
+	            ?>
                     <div class="row">
-                        <?php Render::view('syscrack/templates/template.process', array('processid' => $process->processid, 'processcclass' => $operations->findProcessClass($process->process), 'refresh' => true)); ?>
+                        <div class="col-md-12">
+                            <div class="panel panel-info">
+                                <div class="panel-body text-center">
+                                    <h2>Process Center</h2>
+                                    <small><a onclick="window.location.reload( true )" href="#"> Click here to manage your processes</a></small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>
+                                <?=count($processes)?> total processes
+                            </h5>
+                        </div>
+                    </div>
+                <?php
+                foreach ($processes as $process) {
+                    ?>
+                        <div class="row">
+                            <?php Render::view('syscrack/templates/template.process', array('process' => $process, 'refresh' => true) ); ?>
+                        </div>
                     <?php
                 }
             } else {
 
                 ?>
-                <div class="panel panel-danger">
-                    <div class="panel-heading">
-                        Notice
-                    </div>
-                    <div class="panel-body">
-                        Computer currently has no processes, maybe you should hack something?
-                    </div>
-                </div>
-                <?php
-            }
-            ?>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="panel panel-info">
-                        <div class="panel-body">
-                            Head over to the <a href="/processes/computer/<?=$currentcomputer->computerid?>">process control panel</a> to edit your current
-                            tasks!
+                    <div class="panel panel-danger">
+                        <div class="panel-body text-center">
+                            <h3>Empty</h3>
+                            <small><a onclick="window.location.reload( true )" href="#"> Click here to refresh</a></small>
                         </div>
                     </div>
-                </div>
-            </div>
+                    <?php
+            }
+            ?>
         </div>
     </div>
 

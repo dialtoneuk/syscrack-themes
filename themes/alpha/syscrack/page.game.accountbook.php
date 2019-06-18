@@ -50,14 +50,14 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 		Render::view('syscrack/templates/template.errors');
 	?>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
             <h5 style="color: #ababab" class="text-uppercase">
                 Account Book
             </h5>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <div class="list-group">
                 <a href="/game/addressbook/" class="list-group-item">
                     <h4 class="list-group-item-heading">Address Book</h4>
@@ -69,7 +69,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 </a>
             </div>
         </div>
-        <div class="col-sm-8">
+        <div class="col-md-8">
             <?php
             $accounts = $accountdatabase->getDatabase($session->userid());
 
@@ -77,7 +77,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 
                 ?>
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div class="panel panel-info">
                             <div class="panel-body">
                                 You haven't hacked any bank accounts yet, why don't you check out
@@ -113,21 +113,21 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 
                     ?>
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-md-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     #<?= $value['accountnumber'] ?>
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-md-4">
                                             <div class="well-lg">
                                                 <h1>
                                                     <?= $settings['bank_currency'] . number_format($account->cash) ?>
                                                 </h1>
                                             </div>
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div class="col-md-8">
                                             <ul class="list-group">
                                                 <li class="list-group-item">
                                                     Account Address <span class="badge right"><a style="color: white;"
@@ -191,7 +191,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 
                 ?>
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <p>
                             <?= $count ?> accounts in total...
                         </p>

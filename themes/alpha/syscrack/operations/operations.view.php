@@ -46,7 +46,7 @@ if (isset($parsedown) == false)
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <button style="width: 100%;" class="btn btn-default" onclick="window.location.href = '/game/internet/<?=@$ipaddress?>'">

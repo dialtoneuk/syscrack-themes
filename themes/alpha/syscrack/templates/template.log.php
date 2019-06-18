@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-md-12">
         <?php
         if ( empty( $log ))
         {
@@ -7,8 +7,8 @@
 
             <div class="panel panel-danger">
                 <div class="panel-body text-center">
-                    <h5>Empty
-                        <br><small><a onclick="window.location.reload( true )" href="#"> Click here to refresh</a></small></h5>
+                    <h3>Empty</h3>
+                    <small><a onclick="window.location.reload( true )" href="#"> Click here to refresh</a></small>
                 </div>
             </div>
             <?php
@@ -36,11 +36,11 @@ echo '[', $value['ipaddress'] . '] ' . strftime("%d-%m-%Y %H:%M:%S", $value['tim
 
                         ?>
 
-                        <button class="btn btn-danger" type="submit"
+                        <button class="btn btn-danger" data-content="none" type="submit"
                                 onclick="window.location.href = '/game/internet/<?= $ipaddress ?>/clear'">
                             <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> Clear Log
                         </button>
-                        <button class="btn btn-success" type="button"
+                        <button class="btn btn-success" data-content="none" type="button"
                                 onclick="window.location.href = '/game/internet/<?= $ipaddress ?>'">
                             <span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> Refresh Log
                         </button>
@@ -53,7 +53,7 @@ echo '[', $value['ipaddress'] . '] ' . strftime("%d-%m-%Y %H:%M:%S", $value['tim
                     <button class="btn btn-danger" type="submit">
                         <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> Clear Log
                     </button>
-                    <button class="btn btn-success" type="button"
+                    <button class="btn btn-success" data-content="none" type="button"
                             onclick="window.location.href = '/game/internet/<?= $ipaddress ?>'">
                         <span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> Refresh Log
                     </button>

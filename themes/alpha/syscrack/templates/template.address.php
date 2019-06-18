@@ -62,7 +62,7 @@ $computer = $internet->computer($value['ipaddress']);
 
                             ?>
                             <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-md-12">
                                     <div class="panel panel-info">
                                         <div class="panel-body">
                                             You currently have a <?= $software->softwarename ?> ( lvl <?= $software->level ?> ) installed on this computer. <small style="float: right;">It was

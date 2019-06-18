@@ -18,13 +18,13 @@
                         ?>
                     </h5>
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-md-12">
                             <div class="row">
                                 <?php
                                 if ( isset( $items ) == false || isset( $purchases ) == false )
                                 {
                                     ?>
-                                    <div class="col-sm-12">
+                                    <div class="col-md-12">
                                         <div class="panel panel-danger">
                                             <div class="panel-heading">
                                                 Market Error
@@ -47,7 +47,7 @@
                                     {
 
                                         ?>
-                                            <div class="col-sm-12">
+                                            <div class="col-md-12">
                                                 <div class="panel panel-default">
                                                     <div class="panel-body">
                                                         Sorry, we are all sold out...
@@ -61,7 +61,7 @@
                                         if (empty($accounts)) {
 
                                             ?>
-                                            <div class="col-sm-12" style="height: 120px;">
+                                            <div class="col-md-12" style="height: 120px;">
                                                 <div class="panel panel-default">
                                                     <div class="panel-body">
                                                         You currently don't have a bank account, please get one before you
@@ -75,7 +75,7 @@
                                         {
 
                                             ?>
-                                            <div class="col-sm-6">
+                                            <div class="col-md-6">
                                                 <p>
                                                     Welcome to the marketplace, here you can buy all sorts of hardwares and
                                                     softwares which will make
@@ -114,7 +114,7 @@
                                                     ?>
                                                 </ul>
                                                 <div class="row">
-                                                    <div class="col-sm-12">
+                                                    <div class="col-md-12">
                                                         <div class="panel panel-default">
                                                             <div class="panel-body text-center">
                                                                 All actions on this page are logged locally, so remember to
@@ -124,14 +124,14 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-sm-12">
+                                                    <div class="col-md-12">
                                                         <p class="text-center">
                                                             <a href="/game/internet/<?= @$ipaddress ?>/">Go Back</a>
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6">
+                                            <div class="col-md-6">
                                                 <?php
                                                 foreach ($items as $key=>$item ) {
                                                     ?>
@@ -195,7 +195,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-md-12">
                     <p class="text-center">
                         <a onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
                             Back to the top...

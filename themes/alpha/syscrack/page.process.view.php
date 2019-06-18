@@ -20,7 +20,7 @@ use Framework\Application\Render;
                 ?>
             </div>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-md-12">
                     <div class="panel panel-info">
                         <div class="panel-body">
                             Head over to the <a href="/processes/">process control panel</a> to edit your current
@@ -30,7 +30,7 @@ use Framework\Application\Render;
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-md-12">
                     <button style="width: 100%;" class="btn btn-primary" type="button" onclick="window.location.reload()">
                         <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Refresh Page
                     </button>

@@ -30,7 +30,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
         Render::view('syscrack/templates/template.errors');
 	?>
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-md-6">
             <h5 style="color: #ababab" class="text-uppercase">
                 Login
             </h5>
@@ -55,7 +55,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 ?>
             </form>
         </div>
-        <div class="col-sm-6">
+        <div class="col-md-6">
             <h5 style="color: #ababab" class="text-uppercase">
                 Register
             </h5>

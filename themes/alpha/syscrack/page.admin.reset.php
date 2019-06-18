@@ -36,7 +36,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 		Render::view('syscrack/templates/template.errors');
 	?>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
             <?php
 
             if (isset($_GET['error']))
@@ -53,9 +53,9 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 
             Render::view('syscrack/templates/template.admin.options');
             ?>
-            <div class="col-sm-8">
+            <div class="col-md-8">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-md-4">
                         <h5 style="color: #ababab" class="text-uppercase">
                             Reset
                         </h5>
@@ -70,7 +70,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                         ], 'remove_submit' => true, 'remove_form' => true));
                         ?>
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-md-8">
                         <h5 style="color: #ababab" class="text-uppercase">
                             How does this work?
                         </h5>
@@ -88,7 +88,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div class="btn-group btn-group-justified" role="group" aria-label="...">
                             <div class="btn-group" role="group">
                                 <button type="submit" class="btn btn-default">Reset Game</button>

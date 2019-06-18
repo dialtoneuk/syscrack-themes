@@ -11,9 +11,9 @@
 	        ?>
             <div class="row">
                 <?php Render::view('syscrack/templates/template.admin.options'); ?>
-                <div class="col-lg-8">
+                <div class="col-md-8">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-md-12">
                             <div class="panel panel-info">
                                 <div class="panel-body">
                                     Edit these settings with extreme caution and make sure to follow the guide on our
@@ -45,7 +45,7 @@
                                     <div class="row">
                                         <form method="post">
                                             <input type="hidden" name="setting" value="<?=$key?>">
-                                            <div class="col-lg-12">
+                                            <div class="col-md-12">
                                                 <div class="panel panel-default">
                                                     <div class="panel-body">
                                                         <h3><?=$key?></h3>

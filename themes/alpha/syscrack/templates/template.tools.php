@@ -16,7 +16,7 @@ use Framework\Application\Render;
     else
     {
 
-        foreach( $tools as $tool )
+        foreach( $tools as $key=>$tool )
         {
 
             if( isset( $tool["requirements"]["empty"] ) )
@@ -24,8 +24,8 @@ use Framework\Application\Render;
 
             ?>
                 <div class="row">
-                    <div class="col-lg-12">
-                        <form action="/game/internet/<?=$ipaddress ?>/<?=$tool["action"]?>" method="post">
+                    <div class="col-md-12">
+                        <form id="form<?=$key?>" action="/game/internet/<?=$ipaddress ?>/<?=$tool["action"]?>" method="post">
                             <?php
                             if( isset( $tool["requirements"]["panel"] ) )
                                 echo "<div class=\"panel panel-" .  $tool["requirements"]["panel"]  . "\">";
@@ -55,7 +55,7 @@ use Framework\Application\Render;
                                             }
 
                                         ?>
-                                    <button style="width: 100%;" class="btn btn-<?=@$tool["class"]?>" type="submit">
+                                    <button style="width: 100%;"  data-content="form<?=$key?>" class="btn btn-<?=@$tool["class"]?>" type="submit">
                                         <span class="glyphicon glyphicon-<?=@$tool["icon"]?> aria-hidden="true"></span> <?=$tool["description"]?>
                                     </button>
                                 </div>

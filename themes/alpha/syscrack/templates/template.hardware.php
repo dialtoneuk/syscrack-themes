@@ -4,11 +4,11 @@ foreach ($hardwares as $type => $hardware)
     $icons = $settings['hardware_icons'];
 ?>
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-md-12">
             <div class="panel panel-info">
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-md-2">
                             <?php
 
                             if (isset($icons[$type])) {
@@ -28,7 +28,7 @@ foreach ($hardwares as $type => $hardware)
                             }
                             ?>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-md-10">
                             <h1>
                                 <?php
 

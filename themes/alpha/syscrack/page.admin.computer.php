@@ -1,33 +1,5 @@
 <?php
-
-use Framework\Application\UtilitiesV2\Container;
-use Framework\Application\Render;
-use Framework\Application\Settings;
-use Framework\Syscrack\Game\Computer;
-use Framework\Syscrack\Game\Utilities\PageHelper;
-use Framework\Syscrack\User;
-
-$session = Container::get('session');
-
-if ($session->isLoggedIn()) {
-
-    $session->updateLastAction();
-}
-
-if (isset($user) == false) {
-
-    $user = new User();
-}
-
-if (isset($pagehelper) == false) {
-
-    $pagehelper = new PageHelper();
-}
-
-if (isset($computer_controller) == false) {
-
-    $computer_controller = new Computer();
-}
+    use Framework\Application\Render;
 ?>
 <html>
 
@@ -36,15 +8,8 @@ if (isset($computer_controller) == false) {
 Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrack | Admin'));
 
 if ( isset( $_GET['page'] ) )
-{
-
     if ( is_numeric( $_GET['page'] ) == false || strlen(  $_GET['page']  ) > 5 )
-    {
-
         $_GET['page'] = null;
-    }
-}
-
 ?>
 <body>
 <div class="container">
@@ -57,9 +22,7 @@ if ( isset( $_GET['page'] ) )
         <?php
 
         Render::view('syscrack/templates/template.admin.options');
-
-        $computer = $computer_controller->getAllComputers()->toArray();
-        $pages = floor( count( $computer ) / $settings['admin_computer_count'] );
+        $pages = floor( count( $computers ) / $settings['admin_computer_count'] );
         ?>
         <div class="col-md-8">
             <div class="row">
@@ -68,7 +31,7 @@ if ( isset( $_GET['page'] ) )
                         <div class="caption">
                             <h5>Total Virtual Computers</h5>
                             <h3 style="font-size: 1.5em;">
-                                <?=count( $computer )?>
+                                <?=count( $computers )?>
                             </h3>
                         </div>
                     </div>
@@ -139,12 +102,12 @@ if ( isset( $_GET['page'] ) )
                     $offset = $_GET['page'] * $settings['admin_computer_count'];
                 }
 
-                $computer = array_slice( array_reverse( $computer ), $offset, $settings['admin_computer_count']);
+                $computers = array_slice( array_reverse( $computers ), $offset, $settings['admin_computer_count']);
 
-                if (empty($computer)) {
+                if (empty($computers)) {
 
                     ?>
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div class="panel panel-danger">
                             <div class="panel-heading">
                                 No Computer Found
@@ -157,26 +120,25 @@ if ( isset( $_GET['page'] ) )
                     <?php
                 } else {
 
-                    foreach ($computer as $key => $value) {
+                    foreach ($computers as $key => $value) {
 
                         ?>
-                        <div class="col-sm-12">
+                        <div class="col-md-12">
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-sm-3">
+                                        <div class="col-md-3">
                                            <h5>
                                                <?=$value->computerid?><small> computer id</small>
                                            </h5>
                                         </div>
-                                        <div class="col-sm-5">
+                                        <div class="col-md-5">
                                             <h5>
                                                 <?=$value->ipaddress?><span class="badge" style="margin-left: 5%;"><?=$value->type?></span>
                                             </h5>
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-md-4">
                                             <div class="btn-group" style="float: right;" role="group" aria-label="...">
-                                                <button type="button" onclick="window.location.href = '/game/internet/<?=$value->ipaddress?>/'" class="btn btn-warning">View</button>
                                                 <button type="button" onclick="window.location.href = '/admin/computer/edit/<?=$value->computerid?>/'"class="btn btn-success">Edit</button>
                                                 <button type="button" onclick="window.location.href = '/admin/users/edit/<?=$value->userid?>/'" class="btn btn-info">Owner</button>
                                             </div>
@@ -193,7 +155,7 @@ if ( isset( $_GET['page'] ) )
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
             <p class="text-center">
                 <a onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="cursor: pointer;">
                     Back to the top...

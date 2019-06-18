@@ -2,17 +2,7 @@
 use Framework\Application\Render;
 ?>
 <form method="post" action="/game/internet/">
-    <div class="input-group">
-        <input type="text" class="form-control" id="ipaddress" name="ipaddress"
-               placeholder="<?php if (isset($ipaddress)) {
-                   echo $ipaddress;
-               }?>">
-        <span class="input-group-btn">
-            <button class="btn btn-default"
-                    onclick="window.location.href = '/game/internet/' . $('#ipaddress').value()">Connect</button>
-        </span>
-    </div><!-- /input-group -->
-    <div class="panel panel-default" style="margin-top: 2.5%">
+    <div class="panel panel-default">
         <?php
             if( isset( $metadata ) && empty( $metadata->custom ) == false || isset( $metadata->custom["name"] ) )
             {
@@ -31,7 +21,7 @@ use Framework\Application\Render;
 
                     ?>
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-md-12">
                             <div class="panel panel-info">
                                 <div class="panel-body">
                                     Successfully connected to <?=$ipaddress?>

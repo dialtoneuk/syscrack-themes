@@ -13,7 +13,7 @@ use Framework\Application\Render;
             Render::view('syscrack/templates/template.errors');
         ?>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-md-6">
                 <div class="thumbnail">
                     <div class="caption">
                         <h2>Global Processes</h2>
@@ -22,7 +22,7 @@ use Framework\Application\Render;
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6">
                 <div class="thumbnail">
                     <div class="caption">
                         <h2>Local Processes</h2>
@@ -33,7 +33,7 @@ use Framework\Application\Render;
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-md-12">
                 <?php
 
                 if ( empty( $processes ) )
@@ -57,7 +57,7 @@ use Framework\Application\Render;
 
                         ?>
                         <div class="row">
-                            <div class="col-sm-12">
+                            <div class="col-md-12">
                                 <h5 style="color: #ababab" class="text-uppercase">
                                     <?php
 

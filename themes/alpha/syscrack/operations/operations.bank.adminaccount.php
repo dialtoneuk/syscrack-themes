@@ -7,7 +7,7 @@
     <div class="container">
         <?php Render::view('syscrack/templates/template.navigation'); ?>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-md-12">
                 <?php
                     if (isset($_GET['error']))
                         Render::view('syscrack/templates/template.alert', array('message' => $_GET['error']));
@@ -48,7 +48,7 @@
                             </li>
                         </ul>
                         <div class="row">
-                            <div class="col-lg-12">
+                            <div class="col-md-12">
                                 <div class="panel panel-warning">
                                     <div class="panel-body">
                                         Unusual activity will be reported to the local authorities and investigated fully.
@@ -59,7 +59,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row">
-                            <div class="col-lg-12">
+                            <div class="col-md-12">
                                 <p>
                                     Your accounts
                                 </p>
@@ -94,7 +94,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-12">
+                            <div class="col-md-12">
                                 <p>
                                     Transfer Cash
                                 </p>
@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <form style="padding: 0; margin: 0;" method="post">

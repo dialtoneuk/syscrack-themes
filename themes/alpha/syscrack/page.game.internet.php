@@ -9,7 +9,12 @@
 		    Render::view('syscrack/templates/template.errors');
 	    ?>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-md-12">
+	            <?php Render::view('syscrack/templates/template.searchbar'); ?>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 18px">
+            <div class="col-md-12">
 
                 <?php
                     if ( isset( $connection ) && $connection !== $ipaddress ) {
@@ -33,7 +38,7 @@
                     if ($connection == $ipaddress)
                     {
                         ?>
-                            <div class="col-lg-9">
+                            <div class="col-md-9">
                                 <?php Render::view('syscrack/templates/template.computer'); ?>
                             </div>
                         <?php
@@ -41,14 +46,14 @@
                     else
                     {
                         ?>
-                            <div class="col-lg-9">
+                            <div class="col-md-9">
                                 <?php Render::view('syscrack/templates/template.browser'); ?>
                             </div>
                         <?php
                     }
 
                     ?>
-                    <div class="col-lg-3">
+                    <div class="col-md-3">
                         <?php
                             Render::view('syscrack/templates/template.tools', array('tools' => $tools ));
                         ?>

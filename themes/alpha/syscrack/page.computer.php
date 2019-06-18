@@ -13,7 +13,7 @@
 		Render::view('syscrack/templates/template.errors');
 	?>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
             <h5 style="color: #ababab" class="text-uppercase">
                 <span class="badge"><?= $computer->type ?></span> <?= $ipaddress ?>
             </h5>

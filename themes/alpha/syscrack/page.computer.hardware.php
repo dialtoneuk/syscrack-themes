@@ -34,7 +34,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 		Render::view('syscrack/templates/template.errors');
 	?>
     <div class="row">
-        <div class="col-sm-12" onclick="window.location.href = '/computer/'">
+        <div class="col-md-12" onclick="window.location.href = '/computer/'">
             <h5 style="color: #ababab" class="text-uppercase">
                 <span class="badge"><?= $currentcomputer->type ?></span> <?= $currentcomputer->ipaddress ?>
             </h5>
@@ -49,7 +49,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
         <div class="col-md-8">
 
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-md-12">
                     <?php
 
                     $hardwares = $computer_controller->getComputerHardware($currentcomputer->computerid);
@@ -65,7 +65,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                             </div>
                             <div class="panel-body">
                                 <div class="row">
-                                    <div class="col-sm-2">
+                                    <div class="col-md-2">
                                         <?php
 
                                         if (isset($icons[$type])) {
@@ -85,7 +85,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                                         }
                                         ?>
                                     </div>
-                                    <div class="col-sm-10">
+                                    <div class="col-md-10">
                                         <h1>
                                             <?php
 

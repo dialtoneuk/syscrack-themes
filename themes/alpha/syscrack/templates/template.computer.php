@@ -12,17 +12,7 @@ use Framework\Application\Render;
 <?php
     }
 ?>
-<form method="post" action="/game/internet/">
-    <div class="input-group">
-        <input type="text" class="form-control" id="ipaddress" name="ipaddress"
-               placeholder="<?=@$ipaddress?>">
-        <span class="input-group-btn">
-            <button class="btn btn-default"
-                    onclick="window.location.href = '/game/internet/' . $('#ipaddress').value()">Connect</button>
-        </span>
-    </div><!-- /input-group -->
-</form>
-<div class="panel panel-default" style="margin-top: 2.5%">
+<div class="panel panel-default">
     <div class="panel-body">
         <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#log">Log</a></li>
@@ -41,7 +31,7 @@ use Framework\Application\Render;
             </div>
             <div id="hardware" class="tab-pane fade"style="padding-top: 18px;">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <?php Render::view('syscrack/templates/template.hardware', array( 'hardwares' => json_decode( $computer->hardware, true ) ) ); ?>
                     </div>
                 </div>
@@ -55,7 +45,7 @@ use Framework\Application\Render;
                             $usedspace += @$software->size;
                 ?>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <?php Render::view('syscrack/templates/template.storage', array( 'hardwares' => json_decode( $computer->hardware, true ), 'usedspace' => $usedspace ) ); ?>
                     </div>
                 </div>
@@ -63,7 +53,9 @@ use Framework\Application\Render;
         </div>
     </div>
     <div class="panel-footer">
-        <?php echo strtoupper($computer->type);
-        echo ' <small>' . date('d-M-y H:m:s') . '</small>'; ?>
+        <div class="badge">
+            <?=strtoupper($computer->type)?>
+        </div>
+        <?php echo ' <small>' . \Framework\Application\UtilitiesV2\Format::timestamp() . '</small>'; ?>
     </div>
 </div>

@@ -13,14 +13,14 @@
 		        Render::view('syscrack/templates/template.errors');
 	        ?>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-md-12">
                     <h5 style="color: #ababab" class="text-uppercase">
                         <span class="badge"><?= $computer->type ?></span> <?= $computer->ipaddress ?>
                     </h5>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-md-12">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active">
@@ -51,11 +51,11 @@
                                 <div class="row">
                                     <div class="col-md-9">
                                         <?php
-                                            Render::view('syscrack/templates/template.softwares', array("hideoptions" => true  ));
+                                            Render::view('syscrack/templates/template.softwares', array("hideoptions" => true, "admin" => true  ));
                                         ?>
                                         <div class="row">
-                                            <div class="col-lg-12">
-                                                <form action="/admin/computer/edit/<?= $computer->computerid ?>/" method="post">
+                                            <div class="col-md-12">
+                                                <form id="add" action="/admin/computer/edit/<?= $computer->computerid ?>/" method="post">
                                                     <div class="panel panel-default">
                                                         <div class="panel-body">
                                                             <button class="btn btn-success" style="width: 100%;" id="addsoftwaresbutton" type="button" data-toggle="collapse" data-target="#addsoftwares" aria-expanded="false" aria-controls="addsoftwares" onclick="$">
@@ -67,9 +67,18 @@
                                                         <div class="panel panel-info">
                                                             <div class="panel-body">
                                                                 <div class="row">
-                                                                    <div class="col-lg-4">
+                                                                    <div class="col-md-12">
+                                                                        <div class="panel panel-default">
+                                                                            <div class="panel-body">
+                                                                                This will soon be replaced with a tool. Please ignore its awfulness.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
                                                                         <div class="row">
-                                                                            <div class="col-lg-12">
+                                                                            <div class="col-md-12">
                                                                                 <div class="input-group">
                                                                                 <span class="input-group-addon"
                                                                                       id="basic-addon1"><span
@@ -81,7 +90,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="row" style="margin-top: 2.5%;">
-                                                                            <div class="col-lg-12">
+                                                                            <div class="col-md-12">
                                                                                 <div class="input-group">
                                                                                 <span class="input-group-addon"
                                                                                       id="basic-addon1"><span
@@ -94,7 +103,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="row" style="margin-top: 2.5%;">
-                                                                            <div class="col-lg-12">
+                                                                            <div class="col-md-12">
                                                                                 <div class="checkbox">
                                                                                     <label><input type="checkbox" name="schema" checked></label>
                                                                                     <span style="font-size: 10px;">Add to Schema if a schema file is present.</span>
@@ -110,21 +119,28 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-lg-4">
+                                                                    <div class="col-md-4">
                                                                         <div class="row">
-                                                                            <div class="col-lg-12">
-                                                                                <div class="input-group">
-                                                                                <span class="input-group-addon"
-                                                                                      id="basic-addon1"><span
-                                                                                            class="glyphicon glyphicon-hdd"></span></span>
-                                                                                    <input type="text" class="form-control"
-                                                                                           placeholder="vspam" name="uniquename"
-                                                                                           aria-describedby="basic-addon1">
-                                                                                </div>
+                                                                            <div class="col-md-12">
+                                                                                <select name="uniquename" class="combobox input-md form-control">
+		                                                                            <?php
+
+			                                                                            if( empty( $softwaretypes ) == false )
+			                                                                            {
+
+				                                                                            foreach( $softwaretypes as $type )
+				                                                                            {
+					                                                                            ?>
+                                                                                                <option value="<?=$type?>"><?=$type?></option>
+					                                                                            <?php
+				                                                                            }
+			                                                                            }
+		                                                                            ?>
+                                                                                </select>
                                                                             </div>
                                                                         </div>
                                                                         <div class="row" style="margin-top: 12px;">
-                                                                            <div class="col-lg-12">
+                                                                            <div class="col-md-12">
                                                                                 <div class="input-group">
                                                                                 <span class="input-group-addon"
                                                                                       id="basic-addon1"><span
@@ -135,15 +151,8 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="row" style="margin-top: 12px;">
-                                                                            <div class="col-lg-12">
-                                                                                <p>
-                                                                                    vspam, vminer, antivirus, research, cracker, hasher, text, firewall, nmap, vddos, breaker, collector
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
                                                                     </div>
-                                                                    <div class="col-lg-4">
+                                                                    <div class="col-md-4">
                                                                         <?php
                                                                             Render::view('syscrack/templates/template.form', array('form_elements' => [
                                                                                 [
@@ -157,10 +166,10 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
-                                                                    <div class="col-lg-12">
+                                                                    <div class="col-md-12">
                                                                         <button style="width: 100%;"
                                                                                 class="btn btn-default" type="submit">
-                                                                        <span class="glyphicon glyphicon-check"
+                                                                        <span data-content="add" class="glyphicon glyphicon-check"
                                                                               aria-hidden="true"></span> Add
                                                                         </button>
                                                                         <input type="hidden" name="action" value="add">
@@ -180,7 +189,7 @@
 
                                             ?>
                                             <div class="row">
-                                                <div class="col-lg-3">
+                                                <div class="col-md-3">
                                                     <div class="panel panel-warning">
                                                         <div class="panel-body">
                                                             No tools found
@@ -208,7 +217,7 @@
                                             }
 
                                             ?>
-                                            <div class="col-lg-3">
+                                            <div class="col-md-3">
                                                 <?php Render::view("syscrack/templates/template.tools", array('tools' => $tools_admin) ) ?>
                                             </div>
                                             <?php
@@ -221,9 +230,9 @@
                             </div>
                             <div role="tabpanel" class="tab-pane" id="hardwares">
                                 <div class="row" style="margin-top: 2.5%;">
-                                    <div class="col-lg-8">
+                                    <div class="col-md-8">
                                         <div class="row">
-                                            <div class="col-lg-12">
+                                            <div class="col-md-12">
                                                 <?php
 
                                                 $hardwares = json_decode( $computer->hardware, true );
@@ -239,7 +248,7 @@
                                                         </div>
                                                         <div class="panel-body">
                                                             <div class="row">
-                                                                <div class="col-lg-2">
+                                                                <div class="col-md-2">
                                                                     <?php
 
                                                                     if (isset($icons[$type])) {
@@ -259,7 +268,7 @@
                                                                     }
                                                                     ?>
                                                                 </div>
-                                                                <div class="col-lg-10">
+                                                                <div class="col-md-10">
                                                                     <h1>
                                                                         <?php
 
@@ -288,7 +297,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-md-4">
                                     </div>
                                 </div>
                             </div>

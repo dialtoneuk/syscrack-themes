@@ -1,6 +1,4 @@
 <select name="accountnumber" class="combobox input-sm form-control" style="margin-top: 16px;">
-    <option></option>
-
     <?php
         if (empty($accounts) == false) {
 
@@ -8,8 +6,7 @@
 
                 ?>
                 <option value="<?= $account->accountnumber ?>">#<?= $account->accountnumber ?>
-                    (<?= $settings['bank_currency'] . number_format($account->cash) ?>
-                    ) @<?=@$ipaddresses[ $account->computerid ]?></option>
+                    (<?= $settings['bank_currency'] . number_format($account->cash) ?>)<?php if( isset( $ipaddresses[ $account->computerid ] ) ) { echo "@" . $ipaddresses[ $account->computerid ]; }?></option>
                 <?php
             }
         }

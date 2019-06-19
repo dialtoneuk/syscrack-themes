@@ -34,10 +34,8 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
             <h5 style="color: #ababab" class="text-uppercase">
                 Login
             </h5>
-            <form method="post">
 
                 <?php
-
                 Render::view('syscrack/templates/template.form', array('form_elements' => [
                     [
                         'type' => 'text',
@@ -51,9 +49,9 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                         'placeholder' => 'Password',
                         'icon' => 'glyphicon-lock'
                     ]
-                ], 'form_submit_label' => 'Login'));
+                ], 'form_submit_label' => 'Login', 'remove_form' => false ));
                 ?>
-            </form>
+
         </div>
         <div class="col-md-6">
             <h5 style="color: #ababab" class="text-uppercase">

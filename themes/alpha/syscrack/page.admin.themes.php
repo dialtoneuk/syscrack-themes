@@ -12,9 +12,7 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
 		Render::view('syscrack/templates/template.navigation');
 		Render::view('syscrack/templates/template.errors');
 	?>
-    <form method="post">
         <div class="row">
-
             <?php
 
             Render::view('syscrack/templates/template.admin.options');
@@ -103,8 +101,6 @@ Render::view('syscrack/templates/template.header', array('pagetitle' => 'Syscrac
                 ?>
             </div>
         </div>
-    </form>
-
     <?php
 
     Render::view('syscrack/templates/template.footer', array('breadcrumb' => true));

@@ -77,6 +77,11 @@
 
 		}
 	};
+	
+	$string = "<div class='row'><div class='col-md-12'></div><div class='well'>" . json_encode( $model->session ) . "</div></div>";
+
+	if( isset( $debug ) )
+	    echo( $string );
 
 	if( isset( $model->session["data"]["form"] ) == false || empty( $model->session["data"]["form"] ) )
 		return;

@@ -11,6 +11,8 @@ if (is_array($form_elements) == false) {
 
     throw new ViewException('Must be array');
 }
+
+$seed = base64_encode( openssl_random_pseudo_bytes( 32 ) );
 ?>
 
 <?php
@@ -21,7 +23,7 @@ if ($remove_form == false)
 {
 
 ?>
-<form class="form-group" action="<?php if (isset($form_action)) {
+<form class="form-group" id="<?=$seed?>" action="<?php if (isset($form_action)) {
     echo $form_action;
 } ?>" method="post">
     <?php
@@ -31,7 +33,7 @@ if ($remove_form == false)
     {
 
     ?>
-    <form class="form-group" action="<?php if (isset($form_action)) {
+    <form class="form-group" id="<?=$seed?>" action="<?php if (isset($form_action)) {
         echo $form_action;
     } ?>" method="post">
         <?php
@@ -121,7 +123,7 @@ if ($remove_form == false)
                 ?>
                 <div class="btn-group btn-group-justified" style="margin-top: 2.5%" role="group" aria-label="Submit">
                     <div class="btn-group" role="group">
-                        <button type="submit" class="btn btn-default"><?php if (isset($form_submit_label)) {
+                        <button type="submit" data-content="<?=$seed?>" class="btn btn-default"><?php if (isset($form_submit_label)) {
                                 echo $form_submit_label;
                             } else {
                                 echo 'Submit';
@@ -135,7 +137,7 @@ if ($remove_form == false)
             ?>
             <div class="btn-group btn-group-justified" style="margin-top: 2.5%" role="group" aria-label="Submit">
                 <div class="btn-group" role="group">
-                    <button type="submit" class="btn btn-default"><?php if (isset($form_submit_label)) {
+                    <button type="submit" data-content="<?=$seed?>" class="btn btn-default"><?php if (isset($form_submit_label)) {
                             echo $form_submit_label;
                         } else {
                             echo 'Submit';

@@ -43,7 +43,7 @@
 
                                 ?>
                                     <div class="row">
-                                        <form method="post">
+                                        <form method="post" id="<?=$key?>">
                                             <input type="hidden" name="setting" value="<?=$key?>">
                                             <div class="col-md-12">
                                                 <div class="panel panel-default">
@@ -68,7 +68,7 @@
                                                             ?>
 
                                                         </div>
-                                                        <button style="width: 100%; margin-top: 2.5%;" class="btn btn-default" name="action"
+                                                        <button style="width: 100%; margin-top: 2.5%;" data-content="<?=$key?>" class="btn btn-default" name="action"
                                                                 value="transfer" type="submit">
                                                             <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
                                                         </button>

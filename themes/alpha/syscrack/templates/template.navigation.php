@@ -13,12 +13,12 @@
 
                 ?>
 
-                <a class="navbar-brand" href="/game/">SC://</a>
+                <a class="navbar-brand" href="/game/">Syscrack 2</a>
                 <?php
             } else {
 
                 ?>
-                <a class="navbar-brand" href="/">SC://</a>
+                <a class="navbar-brand" href="/">Syscrack 2</a>
                 <?php
             }
             ?>

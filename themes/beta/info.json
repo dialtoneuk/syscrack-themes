@@ -1,0 +1,11 @@
+{
+  "name":"Beta",
+  "description":"Used for testing different designs to certian pages with out effecting the current designing",
+  "author":"Lewis Lancaster",
+  "website":"https://github.com/dialtoneuk",
+  "version": 1.0,
+  "data":{
+    "base": "alpha",
+    "mvc": true
+  }
+}

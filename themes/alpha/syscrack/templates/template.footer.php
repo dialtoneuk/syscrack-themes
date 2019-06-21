@@ -35,10 +35,25 @@
         }
     ?>
     <div class="row">
-        <div class="col-md-12">
-            <p class="small text-center" style="color: lightgray;">
-                Syscrack 2017 was created by <a href="http://www.github.com/dialtoneuk/">Lewis Lancaster</a> and we
-                loaded in <?= 0 ?> seconds
+        <div class="col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item"><a href="<?=$settings["github_main"]?>">Github</a></li>
+                <li class="list-group-item"><a href="/faq/tos">Terms Of Service</a></li>
+                <li class="list-group-item"><a href="/faq/privacy">Privacy Information</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h4>
+                Syscrack is a video game and does not condone real life hacking.
+                <small>
+                    Developed by Lewis Lancaster under the Apache-2.0 license.
+                </small>
+            </h4>
+            <p>
+                This installation of Syscrack could potentially be using third-party software in the form
+                of moddifications. Because of this we are unable to verify the integrity of games which
+                run mods and cannot verify the saftey of users who use modded versions of Syscrack. For more
+                information, please <a href="<?$settings["github_main"]?>"> refer to our github.</a>
             </p>
         </div>
     </div>

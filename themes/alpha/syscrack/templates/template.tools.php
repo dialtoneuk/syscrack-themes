@@ -43,7 +43,7 @@ use Framework\Application\Render;
                                                 if( $input["type"] == "softwares" )
                                                     Render::view("syscrack/templates/template.software.search", array('values' => @$softwares ) );
                                                 elseif( $input["type"] == "accounts" )
-                                                    Render::view("syscrack/templates/template.software.search", array('values' => @$accounts ) );
+                                                    Render::view("syscrack/templates/template.account.search", array('values' => @$accounts ) );
                                                 elseif( $input["type"] == "localsoftwares" )
                                                     Render::view("syscrack/templates/template.software.search", array('values' => @$localsoftwares ) );
                                                 elseif( $input["type"] == "softwaretypes" )

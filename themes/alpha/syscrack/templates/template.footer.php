@@ -51,9 +51,9 @@
             </h4>
             <p>
                 This installation of Syscrack could potentially be using third-party software in the form
-                of moddifications. Because of this we are unable to verify the integrity of games which
+                of modifications. Because of this we are unable to verify the integrity of games which
                 run mods and cannot verify the saftey of users who use modded versions of Syscrack. For more
-                information, please <a href="<?$settings["github_main"]?>"> refer to our github.</a>
+                information, please <a href="<?=$settings["github_main"]?>"> refer to our github.</a>
             </p>
         </div>
     </div>

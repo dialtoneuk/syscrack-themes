@@ -29,19 +29,6 @@
                             <li role="presentation">
                                 <a href="#hardwares" aria-controls="hardwares" role="tab" data-toggle="tab">Hardwares</a>
                             </li>
-
-                            <?php
-
-                                if ( $computer->type == $settings['computers_type_market'] )
-                                {
-
-                                    ?>
-                                    <li role="presentation">
-                                        <a href="#market" aria-controls="market" role="tab" data-toggle="tab">Hardwares</a>
-                                    </li>
-                                    <?php
-                                }
-                            ?>
                             <li style="float: right;"><a href="/admin/computer/">Home <span class="glyphicon glyphicon-arrow-right"></span> </a></li>
                             <li style="float: right;"><a href="/game/internet/<?= $computer->ipaddress ?>">View <span class="glyphicon glyphicon-search"></span> </a></li>
                         </ul>

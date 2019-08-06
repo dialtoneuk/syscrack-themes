@@ -168,6 +168,6 @@
     </body>
 
     <?php
-        Render::view('syscrack/templates/template.footer')
+        Render::view('syscrack/templates/template.footer', array("breadcrumb" => true ))
     ?>
 </html>

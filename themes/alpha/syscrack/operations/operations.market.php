@@ -135,7 +135,7 @@
                                                 <?php
                                                 foreach ($items as $key=>$item ) {
                                                     ?>
-                                                    <form action="/game/internet/<?= @$ipaddress ?>/buy" method="post">
+                                                    <form id="form<?=$key?>" action="/game/internet/<?= @$ipaddress ?>/buy" method="post">
                                                         <div class="panel panel-info">
                                                             <div class="panel-heading">
                                                                 <?= @$item['name'] ?> <span class="badge"
@@ -170,7 +170,7 @@
                                                                     Render::view("syscrack/templates/template.account.search", array('values' => @$accounts ) );
                                                                 ?>
                                                                 <button style="width: 100%; margin-top: 2.5%;"
-                                                                        class="btn btn-sm btn-info" type="submit">
+                                                                        class="btn btn-sm btn-info" type="submit"  data-content="form<?=$key?>">
                                                                         <span class="glyphicon glyphicon-gbp"
                                                                               aria-hidden="true"></span> Purchase
                                                                 </button>

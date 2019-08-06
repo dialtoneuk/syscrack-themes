@@ -58,7 +58,7 @@ use Framework\Application\Render;
                         ?>
                         <div class="row">
                             <div class="col-md-12">
-                                <h5 style="color: #ababab" class="text-uppercase">
+                                <h5 style="color: #ababab; padding-bottom: 6px;" class="text-uppercase">
                                     <?php
 
                                     if ($currentcomputer->computerid == @$process_computer->computerid) {

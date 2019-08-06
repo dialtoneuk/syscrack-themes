@@ -10,7 +10,8 @@
       "css":[
         "bootstrap.min",
         "bootstrap-combobox",
-        "custom"
+        "custom",
+        "simplemde.min"
       ],
       "js":[
         "bootstrap.min",
@@ -18,7 +19,8 @@
       ],
       "js_header":[
         "jquery",
-        "progressbar"
+        "progressbar",
+        "simplemde.min"
       ],
       "img":[
         "art\\art_code",
